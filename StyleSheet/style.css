@@ -1,0 +1,308 @@
+@media screen and (max-width: 570px){}
+@media screen and (min-width: 571px) and (max-width: 1010px){}
+@media screen and (min-width:1010px){}
+
+/*Common CSS-------------------------------------*/
+
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+/*    border: 3px solid lightGray;*/
+}
+
+
+/*
+nav, header, main, footer,section, article, div, aside{
+  margin: 3px;
+  padding: 3px;
+}
+nav, header, main, footer,aside {
+    border: 4px solid darkredred;
+}  
+section, article{
+  border: 3px solid orange;
+}
+
+div {
+    border: 2px solid yellow;
+    
+} 
+*/
+
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  font-size: 20px;;
+  color: black;
+}
+
+.gridArea {
+  background-color: hsl(0,5%,95%);
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+    
+}
+/*Header CSS---------------------------------------*/
+
+header { grid-area: header; }
+header {
+  background-color: none;
+  height: 14vw;
+  }
+
+/*baner text*/
+#fpTitleDiv {
+  text-align: center;
+  padding: 0; /*TO BE REMOVED*/
+  margin: 0;  /*TO BE REMOVED*/
+  
+}
+/*  https://www.1001fonts.com/fancy+modern-fonts.html?page=3*/
+#fpTitleDiv h1 {
+  position: relative;
+  left:25%;
+  margin: 0;
+  font-size: 7vw;
+  color: white;
+  text-shadow: 0.2vw 0.1vw 1vw black;
+  position: absolute;
+  z-index: 2;
+    
+
+}
+
+#fpTitleDiv h1 .redText {
+  color: #5f63d6;
+  font-size: 3.5vw;
+  text-shadow: 0.2vw 0.1vw 1vw #547edd;
+/*  text-shadow: none;*/
+  
+}
+
+
+/*baner image*/
+#fpLogoDiv {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  
+}
+#fpLogoDiv img {
+  width: 70%;
+  position: relative;
+  z-index: 1;
+  left:-6vw;
+}
+#fpTitleDiv, #fpLogoDiv {
+  border: none 
+    
+  
+}
+
+@media screen and (min-width:2210px){
+  #fpTitleDiv h1 {
+    font-size: 160px;
+    left:600px;
+    
+  }
+  
+  #fpTitleDiv h1 .redText {
+    font-size: 80px;
+  }
+}
+
+/*Nav CSS-------------------------------------------*/
+
+nav { grid-area: nav; }
+
+}
+nav {
+  overflow: hidden;
+/*  background-color: #333;*/
+  text-overflow: ellipsis;
+
+
+}
+
+/* Style the topnav links */
+nav a {
+  display: block;
+  
+
+
+}
+@media screen and (min-width: 571px) and (max-width: 1010px){
+  nav a {
+    display: inline;
+  }
+}
+
+
+
+/* Change color on hover */
+nav a:hover {
+  background-color: #ddd;
+
+
+}
+
+#toggle{ /*removes checkbox near MENU label*/
+     display: none;
+
+
+}
+
+@media screen and (max-width: 570px){
+  
+    label{ /*styles MENU symbol*/
+        display: block;
+        cursor: pointer;
+        font-size:28px;
+        color: black;
+        float:left;
+        margin-right: 20px;
+
+    }
+    
+    #toggle:checked + #menu{ /*MENY symbol appears*/
+        display: block;
+    }
+
+    nav #menu{ /*MENU hides when MESNU symbol clicked*/
+        display: none;
+        clear: right;
+    }
+
+}
+/*DESKTOP and TABLET - hide MENU symbol*/
+@media screen and (min-width: 571px) and (max-width: 1010px), (min-width:1010px){
+   label{
+        
+        display: none;
+    }
+}
+/*Main CSS-------------------------------------------*/
+
+
+#hideDiv {
+  float: right;
+    
+}
+
+#hideDiv img {
+  height: 12vw;
+  max-height: 300px;
+  width: auto;
+  
+}
+
+/*hides hideDiv on Mobile and Tablet -- FOR TEST ONLY*/
+@media screen and (max-width: 1010px){
+  #hideDiv{
+    display: none;
+  }
+}
+
+main {grid-area: main;}
+#articleAtThisPage{grid-area: article} 
+#asideUnderground{grid-area: aside1;}
+#asideApps{grid-area: aside2;}
+footer{grid-area: footer}
+
+/*Index.html CSS------------------------------------*/
+
+
+/*Layout*/
+#grid-container-index {
+  display: grid;
+
+}
+
+@media screen and (max-width: 570px){
+  #grid-container-index {
+    grid-template-columns: auto;
+    grid-template-areas:
+    'header'
+    'nav'
+    'article'
+    'main'
+    'aside1'
+    'aside2'
+    'footer';
+  }
+  
+}
+@media screen and (min-width: 571px) and (max-width: 1010px){
+  #grid-container-index {
+    grid-template-columns: 25% auto;
+    grid-template-areas:
+    'header header '
+    'nav nav'
+    'article main'
+    'none aside1'
+    'none aside2'
+    'footer footer';
+  }
+}
+@media screen and (min-width:1010px){
+  #grid-container-index {
+    grid-template-columns: auto 60% auto;
+    grid-template-areas:
+    'header header header'
+    'nav main article'
+    'nav main aside1'
+    'none main aside1'
+    'none main aside1'
+    'none main aside2'
+    'none main aside2'
+    'footer footer footer';
+  }
+
+
+
+}
+
+/*ASIDE1 - Underground*/
+.underground__link {
+  text-align: center
+} 
+
+
+.underground__img {
+  
+  width: 90%;
+  max-width: 300px;
+  
+  border-radius: 15px;
+  padding: 10px;
+  
+  
+}
+
+
+
+/*ASIDE2 - Apps*/
+.app {
+  display: block; 
+  height: 80px;
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(230, 30%, 90%);
+  box-shadow: 5px 5px 10px gray;
+  border-radius: 15px;
+  }
+.app__img {
+  position: relative;
+  float: left;
+  height: 60px;
+  width: auto;
+  border-radius: 20px;
+  
+}
+
