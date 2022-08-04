@@ -15,23 +15,46 @@
 
 <body>
   <div id=grid-container-index>
-  <header>
-    <div id=hideDiv>
-      <img src="Resources/VectorImages/Logo_of_Warsaw.svg.png" alt="official logo of Warsaw">
-    </div>
+  
+    <aside class="fpAccessibility gridArea">
+                  <!--REFERENCE - WD weem 14 video 2 t=15:45      -->
+        <div class="fpAccesibility__block fontSize"> 
+          <p>
+            <span class="small" id="smallA">A</span>
+            <span class="medium" id="mediumA">A</span>
+            <span class="large" id="largeA">A</span>
+          </p>
+        </div>
+      
+        <div class="fpAccesibility__block brightDark">
+          <p>
+            <span class="brightDark__bright" id="makeBright">Bright</span>  
+            <span class="brightDark__dark" id="makeDark">Dark</span>
+          </p>
+        </div>
+      
+    </aside>
+      
     
-    <div id=fpTitleDiv>
-      <h1>WARSAW<span class=redText>city FUNCLUB </span></h1>
-    </div>
-    
-    <div id=fpLogoDiv>
-      <img src="Resources/VectorImages/waw_main.png" alt='Main image - warsaw skyline graphic'>
-    </div>
+    <header class="gridArea">
+      
+      
+      <img id="hidingLogo" src="Resources/VectorImages/Logo_of_Warsaw.svg.png" alt="official logo of Warsaw">
+      
+      <div id=fpTitleDiv>
+        <h1>WARSAW<span class=redText>city FUNCLUB </span></h1>
+      </div>
+
+      <div id=fpLogoDiv>
+        <img src="Resources/VectorImages/waw_main.png" alt='Main image - warsaw skyline graphic'>
+      </div>
     
     
     
     
   </header>
+    
+    
   <nav class="gridArea">
     <label for="toggle">&#9776;</label>
     <input type="checkbox" id= "toggle"/>
@@ -42,6 +65,7 @@
       <a href="page3_bootstrap.html">Events</a>
       <a href="page4.html">Today</a>
       <a href="page5.html">Next 7 days</a>
+      <button class="button-printThisPage"onclick="window.print()">Print this page</button>
     </div>
   </nav>
   <main>
@@ -58,7 +82,7 @@
     </section>
   </main>
     <article class="articleAtThisPage gridArea">
-      <h3>At this page:</h3>
+      <h2>At this page:</h2>
       <ul>
         <li>Introduction</li>
         <li>Photos of Warsaw</li>
@@ -67,7 +91,7 @@
       </ul>
     </article>
   <aside id=asideUnderground class="gridArea underground__link" >
-    <h3>Underground Map:</h3>
+    <h2>Underground Map:</h2>
     <a href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>
       <img class="underground__img" src="Resources/VectorImages/metroMap.png" alt="Warsaw metro diagram">
     </a>
@@ -75,19 +99,19 @@
     
   <aside id=asideApps class="gridArea">
     <h3>Apps:</h3>
-    <div class=app>
+    <div class="app jakDojade">
       <a class="app_link" href="https://jakdojade.pl/warszawa/trasa/">
         <img class="app__img" src="Resources/Icons/jakdojadeIcon.webp" alt='JakDojade Application logo'>JakDojade
       </a>
-      <p class="app_description">- the best app for public transport in Warsaw</p>
+      <p class="app__description">- the best app for public transport in Warsaw</p>
     </div>
     
     
-    <div class=app>
+    <div class="app veturilo">
       <a class="app_link" href="https://veturilo.waw.pl/en/">
         <img class="app__img" src="Resources/Icons/VeturiloLogo.svg" alt="Veturilo - Public Bikes logo">Veturilo
       </a>
-      <p class="app_description">- Warsaw public bicycles</p>
+      <p class="app__description">- Warsaw public bicycles</p>
     </div>
     
     
@@ -95,5 +119,9 @@
   </aside>
   <footer class="gridArea"><h2>FOOTER</h2></footer>
   </div>
+  
+<!--  SCRIPTS-->
+  <script src="scripts/firstScript.js">
+  </script>
 </body>
 </html>

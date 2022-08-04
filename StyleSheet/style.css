@@ -8,7 +8,7 @@
 *{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-/*    border: 3px solid lightGray;*/
+    border: 3px solid lightGray;
 }
 
 
@@ -36,10 +36,17 @@ h2 {
   font-style: normal;
   font-variant: normal;
   font-weight: bold;
-  font-size: 20px;;
+  font-size: 1.3em;
   color: black;
 }
 
+.small  {font-size: 1.0em;}
+.medium {font-size: 1.5em;}
+.large  {font-size: 2.0em;}
+
+#smallA, #mediumA, #largeA {
+  cursor: pointer;
+}
 .gridArea {
   background-color: hsl(0,5%,95%);
   border-radius: 10px;
@@ -48,6 +55,34 @@ h2 {
     
 }
 /*Header CSS---------------------------------------*/
+.fpAccessibility.gridArea {grid-area: accesibility;}
+.fpAccesibility__block {
+  float:right;
+}
+.fpAccessibility p  {
+  margin: 0;
+  
+}
+.temp1 {
+  font-size: 0.4em;
+}
+
+ .brightDark__dark  {
+    color: white;
+    background-color: black;
+/*    background: black;*/
+  }
+
+.brightDark__bright  {
+    color: black;
+    background-color: white;
+  
+  }
+
+.brightDark__dark,.brightDark__bright {
+  cursor: pointer;
+}
+
 
 header { grid-area: header; }
 header {
@@ -118,12 +153,15 @@ header {
 }
 
 /*Nav CSS-------------------------------------------*/
+.button-printThisPage {
+  font-size: 1em;
+}
 
 nav { grid-area: nav; }
 
 }
 nav {
-  overflow: hidden;
+  
 /*  background-color: #333;*/
   text-overflow: ellipsis;
 
@@ -134,12 +172,14 @@ nav {
 nav a {
   display: block;
   
-
-
+  
 }
 @media screen and (min-width: 571px) and (max-width: 1010px){
   nav a {
     display: inline;
+
+    
+    
   }
 }
 
@@ -154,24 +194,27 @@ nav a:hover {
 
 #toggle{ /*removes checkbox near MENU label*/
      display: none;
+/*
+   */
 
 
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 570px) {
   
     label{ /*styles MENU symbol*/
         display: block;
         cursor: pointer;
         font-size:28px;
         color: black;
-        float:left;
-        margin-right: 20px;
+/*        float:left;*/
+/*        margin-right: 20px;*/
 
     }
     
     #toggle:checked + #menu{ /*MENY symbol appears*/
         display: block;
+      
     }
 
     nav #menu{ /*MENU hides when MESNU symbol clicked*/
@@ -190,21 +233,18 @@ nav a:hover {
 /*Main CSS-------------------------------------------*/
 
 
-#hideDiv {
+#hidingLogo{
   float: right;
-    
-}
-
-#hideDiv img {
   height: 12vw;
   max-height: 300px;
   width: auto;
-  
+  display: block; 
 }
 
-/*hides hideDiv on Mobile and Tablet -- FOR TEST ONLY*/
+
+/*hides hidingLogo on Mobile and Tablet -- FOR TEST ONLY*/
 @media screen and (max-width: 1010px){
-  #hideDiv{
+  #hidingLogo {
     display: none;
   }
 }
@@ -216,7 +256,11 @@ main {grid-area: main;}
 footer{grid-area: footer}
 
 /*Index.html CSS------------------------------------*/
-
+.articleAtThisPage li, h2 {
+  word-wrap: break-word;
+  
+    
+}
 
 /*Layout*/
 #grid-container-index {
@@ -224,10 +268,11 @@ footer{grid-area: footer}
 
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 570px) {
   #grid-container-index {
     grid-template-columns: auto;
     grid-template-areas:
+    'accesibility'
     'header'
     'nav'
     'article'
@@ -242,6 +287,7 @@ footer{grid-area: footer}
   #grid-container-index {
     grid-template-columns: 25% auto;
     grid-template-areas:
+    'accesibility accesibility '
     'header header '
     'nav nav'
     'article main'
@@ -254,6 +300,7 @@ footer{grid-area: footer}
   #grid-container-index {
     grid-template-columns: auto 60% auto;
     grid-template-areas:
+    'accesibility accesibility accesibility'
     'header header header'
     'nav main article'
     'nav main aside1'
@@ -290,7 +337,6 @@ footer{grid-area: footer}
 /*ASIDE2 - Apps*/
 .app {
   display: block; 
-  height: 80px;
   margin: 5px;
   padding: 5px;
   background-color: hsl(230, 30%, 90%);
@@ -303,6 +349,32 @@ footer{grid-area: footer}
   height: 60px;
   width: auto;
   border-radius: 20px;
+  
+}
+
+
+
+/*#### TEST media print TEST*/
+@media print  {
+  .fpAccessibility {
+    display: none;
+    
+  }
+  div > p {
+        break-inside: avoid;
+    }
+  
+  #grid-container-index {
+    grid-template-columns: auto;
+    grid-template-areas:
+    'header'
+    'nav'
+    'article'
+    'main'
+    'aside1'
+    'aside2'
+    'footer';
+  }
   
 }
 
