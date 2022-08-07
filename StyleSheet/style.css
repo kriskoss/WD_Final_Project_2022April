@@ -8,9 +8,26 @@
 *{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    border: 3px solid lightGray;
+/*    border: 3px solid lightGray;*/
 }
 
+img{
+  
+}
+
+img.darkMode-on {
+  filter: brightness(0.8);
+}
+
+button {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.darkMode-on {
+  background-color: #393939;
+  
+}
 
 /*
 nav, header, main, footer,section, article, div, aside{
@@ -29,7 +46,22 @@ div {
     
 } 
 */
+* {
+  
+}
+*.darkMode-on{
+  color: beige;
+}
+body{
+  
+}
+body.darkMode-on{
+  background-color: black;
+}
 
+h1 {
+  
+}
 
 h2 {
   font-family: Arial, Helvetica, sans-serif;
@@ -38,6 +70,10 @@ h2 {
   font-weight: bold;
   font-size: 1.3em;
   color: black;
+}
+
+h2.darkMode-on {
+  
 }
 
 .small  {font-size: 1.0em;}
@@ -54,9 +90,13 @@ h2 {
   padding: 5px;
     
 }
+.gridArea.darkMode-on{
+  background-color: hsl(0,5%,10%);
+}
+
 /*Header CSS---------------------------------------*/
 .fpAccessibility.gridArea {grid-area: accesibility;}
-.fpAccesibility__block {
+.float-right {
   float:right;
 }
 .fpAccessibility p  {
@@ -67,21 +107,41 @@ h2 {
   font-size: 0.4em;
 }
 
- .brightDark__dark  {
-    color: white;
-    background-color: black;
-/*    background: black;*/
+.theme {
+  
+}
+
+.theme__span {
+  cursor: pointer;
+}
+
+.fontSize {
+  
+}
+
+.fontSize__span {
+  
+}
+
+
+.theme__span:hover, .fontSize__span:hover {
+  border: 3px solid red;
+  border-radius: 5px;
+  
+}
+
+ .theme__span--dark {
+    color: beige;
+    background-color: darkslategray;
   }
 
-.brightDark__bright  {
+.theme__span--bright  {
     color: black;
     background-color: white;
   
   }
 
-.brightDark__dark,.brightDark__bright {
-  cursor: pointer;
-}
+
 
 
 header { grid-area: header; }
@@ -89,6 +149,11 @@ header {
   background-color: none;
   height: 14vw;
   }
+
+header.darkMode-on {
+  background-color: navy;
+  
+}
 
 /*baner text*/
 #fpTitleDiv {
@@ -98,7 +163,7 @@ header {
   
 }
 /*  https://www.1001fonts.com/fancy+modern-fonts.html?page=3*/
-#fpTitleDiv h1 {
+.fpTitleDiv__text {
   position: relative;
   left:25%;
   margin: 0;
@@ -111,13 +176,27 @@ header {
 
 }
 
-#fpTitleDiv h1 .redText {
+.fpTitleDiv__text.darkMode-on {
+  color: #14203c;
+  text-shadow: 0.2vw 0.1vw 1vw white;
+}
+
+.fpTitleDiv__text .redText {
   color: #5f63d6;
   font-size: 3.5vw;
   text-shadow: 0.2vw 0.1vw 1vw #547edd;
 /*  text-shadow: none;*/
   
 }
+
+.fpTitleDiv__text .redText.darkMode-on {
+  color: #183a89;
+  text-shadow: 0.2vw 0.1vw 1vw #ebf29e;
+  
+/*  text-shadow: none;*/
+  
+}
+
 
 
 /*baner image*/
@@ -135,10 +214,16 @@ header {
   left:-6vw;
 }
 #fpTitleDiv, #fpLogoDiv {
-  border: none 
+  border: none
+    
     
   
 }
+#fpLogoDiv.darkMode-on {
+  filter: drop-shadow(0vw -1vw 0.5vw rgba(233, 234, 220, 0.19));
+}
+
+
 
 @media screen and (min-width:2210px){
   #fpTitleDiv h1 {
@@ -291,6 +376,8 @@ footer{grid-area: footer}
     'header header '
     'nav nav'
     'article main'
+    'none main'
+      'none main'
     'none aside1'
     'none aside2'
     'footer footer';
@@ -332,6 +419,14 @@ footer{grid-area: footer}
   
 }
 
+/*
+.underground__img.darkMode-on {
+    filter: brightness(0.8)
+  
+  
+}
+*/
+
 
 
 /*ASIDE2 - Apps*/
@@ -343,6 +438,12 @@ footer{grid-area: footer}
   box-shadow: 5px 5px 10px gray;
   border-radius: 15px;
   }
+
+.app.darkMode-on {
+  background-color: hsl(230, 30%, 20%);
+  box-shadow:none;
+}
+
 .app__img {
   position: relative;
   float: left;
@@ -351,6 +452,9 @@ footer{grid-area: footer}
   border-radius: 20px;
   
 }
+
+
+
 
 
 

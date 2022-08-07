@@ -13,36 +13,53 @@
     <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
 </head>
 
-<body>
+<!--
+  var btn = document.getElementById("btn");
+    btn.onclick= function(){
+      alert(this.id);
+    } 
+  
+-->
+<script>
+  window.onload= function(){
+    sayHello();
+    function sayHello(){
+      alert("Welcome on the page")
+    }
+   }
+</script>
+
+  <body>
+  <button id="btn">BUTTON</button>
+  
   <div id=grid-container-index>
   
     <aside class="fpAccessibility gridArea">
                   <!--REFERENCE - WD weem 14 video 2 t=15:45      -->
-        <div class="fpAccesibility__block fontSize"> 
+        <div class="fontSize float-right "> 
           <p>
-            <span class="small" id="smallA">A</span>
-            <span class="medium" id="mediumA">A</span>
-            <span class="large" id="largeA">A</span>
+            <span class="fontSize__span small" id="smallA">A</span>
+            <span class="fontSize__span medium" id="mediumA">A</span>
+            <span class="fontSize__span large" id="largeA">A</span>
           </p>
         </div>
       
-        <div class="fpAccesibility__block brightDark">
+        <div class="theme float-right">
           <p>
-            <span class="brightDark__bright" id="makeBright">Bright</span>  
-            <span class="brightDark__dark" id="makeDark">Dark</span>
+            <span class="theme__span theme__span--bright" id="makeBright">Bright</span>  
+            <span class="theme__span  theme__span--dark" id="makeDark">Dark</span>
           </p>
         </div>
       
     </aside>
-      
-    
+          
     <header class="gridArea">
       
       
       <img id="hidingLogo" src="Resources/VectorImages/Logo_of_Warsaw.svg.png" alt="official logo of Warsaw">
       
       <div id=fpTitleDiv>
-        <h1>WARSAW<span class=redText>city FUNCLUB </span></h1>
+        <h1 class=fpTitleDiv__text>WARSAW<span class=redText>city FUNCLUB </span></h1>
       </div>
 
       <div id=fpLogoDiv>
@@ -54,8 +71,9 @@
     
   </header>
     
+    <aside id="breadcrumbs"></aside>
     
-  <nav class="gridArea">
+    <nav class="gridArea">
     <label for="toggle">&#9776;</label>
     <input type="checkbox" id= "toggle"/>
     <div id="menu">
@@ -68,19 +86,36 @@
       <button class="button-printThisPage"onclick="window.print()">Print this page</button>
     </div>
   </nav>
-  <main>
-    <section class="fpIntro gridArea">
-      <h2>Website introducion</h2>
-      <ul>
-        <li>This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
-        <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
-        <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
-        <li>Each section is made by you for you. </li>
-        <li></li>
-        <li></li>
-      </ul>
-    </section>
-  </main>
+    
+    <main class="gridArea">
+      <section id ="fpIntro">
+        <h2>Website introducion</h2>
+        <ul>
+          <li>This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
+          <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
+          <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
+          <li>Each section is made by you for you. </li>
+          <li></li>
+          <li></li><li>This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
+          <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
+          <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
+          <li>Each section is made by you for you. </li>
+          <li></li>
+          <li></li><li>This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
+          <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
+          <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
+          <li>Each section is made by you for you. </li>
+          <li></li>
+          <li></li><li>This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
+          <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
+          <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
+          <li>Each section is made by you for you. </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+    </main>
+    
     <article class="articleAtThisPage gridArea">
       <h2>At this page:</h2>
       <ul>
@@ -90,14 +125,15 @@
         
       </ul>
     </article>
-  <aside id=asideUnderground class="gridArea underground__link" >
+    
+    <aside id=asideUnderground class="gridArea underground__link" >
     <h2>Underground Map:</h2>
     <a href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>
       <img class="underground__img" src="Resources/VectorImages/metroMap.png" alt="Warsaw metro diagram">
     </a>
   </aside>
     
-  <aside id=asideApps class="gridArea">
+    <aside id=asideApps class="gridArea">
     <h3>Apps:</h3>
     <div class="app jakDojade">
       <a class="app_link" href="https://jakdojade.pl/warszawa/trasa/">
@@ -117,7 +153,9 @@
     
     
   </aside>
-  <footer class="gridArea"><h2>FOOTER</h2></footer>
+    
+    <footer class="gridArea"><h2>FOOTER</h2></footer>
+    
   </div>
   
 <!--  SCRIPTS-->
