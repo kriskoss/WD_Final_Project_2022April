@@ -7,12 +7,12 @@ module.exports = {
     'no-console': 0,
 
     'no-undef': 2,
-    'no-var': 2,
+    'no-var': 1,
     'no-unused-vars': [1, { vars: 'all', args: 'none' }],
     'no-use-before-define': 0,
     'func-call-spacing': 2, // standard warn, men jeg synes error!
 
-    semi: 2,
+    semi: 1,
     'no-empty': 1,
     'no-constant-condition': 1, // giver kun en warning, fordi vi godt må bruge nogle til test
 

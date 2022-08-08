@@ -72,6 +72,27 @@ h2 {
   color: black;
 }
 
+.progress {
+  width: 0;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 3;
+    
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: crimson;
+}
+
+.progress.darkMode-on{
+  border-bottom-color: beige;
+  border-bottom-width: 3px;
+}
+
+.progress--complete {
+  opacity: 0.5
+}
+
+
 h2.darkMode-on {
   
 }

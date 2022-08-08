@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang= "en">
+
+<!-- This head section contains all the invisible information about the page -->
+<head>
+    <title>WD final project - PAGE 5 LECTURE CODE TRAINING</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Prototype website for the final project">
+    <meta name="author" content="KK">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="refresh" content="600">
+    <meta name="keywords" content="to be updated">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+  
+</head>
+  
+<body>
+  <div class="tryCatch_methodes">
+    <div class="input_line">
+      <input type="button" value="ClickMe-tryCatch active" onclick="try{nonExistFunction();}catch(ex){console.log('error caught')}"/>
+      <input type="button" value="ClickMe-tryCatch none" onclick="nonExistFunction()"/>
+    </div>
+    <h2>Try-catch method</h2>
+    <button id="btn1">btn-try-catch</button>
+    
+    
+    //this 
+    <button id="btn2">btn-thisId</button>
+    <script>
+      //  try-catch
+      let btn1 = document.getElementById("btn1")
+      btn1.onclick = function() {
+        try {
+          sayhelloooo();
+        } 
+        catch(err) {
+          alert("no sayhelloooo funciton. Correct one sayhello()")
+        }
+      }
+    </script>
+    
+    <script>
+    function sayhello() {
+      alert("heloo");
+    }
+//    onload event
+    window.onload= function(){
+      alert("onload alert")
+    }
+
+
+//    this.id
+    var btn2 = document.getElementById("btn2");
+    btn2.onclick= function(){
+      alert("this.id="+this.id);
+    } 
+
+
+  </script>
+    
+  </div>
+    
+  <div class="event_listener_examples">
+    <h2>Week 14 - event listerners</h2>
+    <div class="eventHandler_onclick">
+      <h3>Event handler - simple example</h3>
+      <p>notice the use of a function(){} with every handler</p>
+      <button id="btn">Event handler - on click </button>
+    </div>
+    <script>
+      btn = document.getElementById("btn")
+      btn.onclick = function() {
+        alert("You have clicked me")
+      };
+    </script>
+
+    
+    <div class=eventListener_example>
+    
+    <button id="btn3">Event listener 1</button>  
+    <button id="btn4">Event listener 2</button>  
+    <script>
+      
+      
+      function changeText(c){
+        c.textContent="Mouse over"
+      }
+      
+      function restoreText(c){
+        c.textContent="Event listener"
+      }
+      
+      function once() {
+        alert("You have clicked me");
+      }
+      
+      function mouse() {
+        alert("Mouse is over me")
+      }
+      
+      btn3=document.getElementById("btn3");
+      btn3.addEventListener("click", once);
+      btn3.addEventListener("mouseout", mouse);
+      
+      btn4=document.getElementById("btn4");
+      btn4.addEventListener("click", once);
+      btn4.addEventListener("mouseover", function() {changeText(this)});
+      btn4.addEventListener("mouseout", function() {restoreText(this)});
+    </script>
+  </div>
+  </div>
+   
+  <div id="progress"></div>
+  
+</body>
+  <footer>
+    <style>
+      body {
+        height: 2000px;
+        background: salmon;
+      }
+      
+      #progress {
+        border-bottom: 20px solid green;
+        width: 20px;
+        position: fixed;
+        top: 3; left: 0;
+      }
+    </style>
+    <script>
+      var bar = document.getElementById("progress");
+      window.addEventListener("scroll", function(){
+        bar.style.width = pageYOffset;
+      })
+    </script>
+  </footer>
+</html>
