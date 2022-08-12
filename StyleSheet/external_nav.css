@@ -1,0 +1,74 @@
+/*Nav CSS-------------------------------------------*/
+.button-printThisPage {
+  font-size: 1em;
+}
+
+nav { grid-area: nav; }
+
+}
+nav {
+
+}
+
+/* Style the topnav links */
+nav a {
+  display: block;
+  
+  
+}
+@media screen and (min-width: 571px) and (max-width: 1010px){
+  nav a {
+    display: inline;
+
+    
+    
+  }
+}
+
+
+
+/* Change color on hover */
+nav a:hover {
+  background-color: #ddd;
+
+
+}
+
+#toggle{ /*removes checkbox near MENU label*/
+     display: none;
+/*
+   */
+
+
+}
+
+@media screen and (max-width: 570px) {
+  
+    label{ /*styles MENU symbol*/
+        display: block;
+        cursor: pointer;
+        font-size:28px;
+        color: black;
+/*        float:left;*/
+/*        margin-right: 20px;*/
+
+    }
+    
+    #toggle:checked + #menu{ /*MENY symbol appears*/
+        display: block;
+      
+    }
+
+    nav #menu{ /*MENU hides when MESNU symbol clicked*/
+        display: none;
+        clear: right;
+    }
+
+}
+/*DESKTOP and TABLET - hide MENU symbol*/
+@media screen and (min-width: 571px) and (max-width: 1010px), (min-width:1010px){
+   label{
+        
+        display: none;
+    }
+}

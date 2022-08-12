@@ -2,57 +2,62 @@
 <html lang= "en">
 
 <!-- This head section contains all the invisible information about the page -->
-<head>
-    <title>WD final project - PAGE 1</title>
+  <head>
+    <title>WD final project - INDEX</title>
+    <meta name="description" content="Prototype website for the final project">  
+    <meta name="keywords" content="to be updated">
+    
     <meta charset="utf-8">
-    <meta name="description" content="Prototype website for the final project">
     <meta name="author" content="KK">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="refresh" content="600">
-    <meta name="keywords" content="to be updated">
-<!--    <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">-->
-    <link rel="stylesheet" type="text/css" href="StyleSheet/style-page1.css">
-</head>
-
- <body>
-
-<div class="header">
-  <h1>Chania</h1>
-</div>
-
-<div class="row">
-  <div class="col-3 col-s-4 menu">
-    <ul>
-      <li><a href="index.html">index</a></li>
-      <li><a href="page1_grid-view.html">page1</a></li>
-      <li><a href="page2_my_grid-template.html">page2</a></li>
-      <li><a href="page3_bootstrap.html">page3</a></li>
-      <li><a href="page4.html">page4</a></li>
-      <li><a href="page5.html">page5</a></li>
-    </ul>
-  </div>
-
-  <div class="col-6 col-s-8">
-    <h1>The City</h1>
-    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
-  </div>
-
-  <div class="col-3 col-s-12">
-    <div class="aside">
-      <h2>What?</h2>
-      <p>Chania is a city on the island of Crete.</p>
-      <h2>Where?</h2>
-      <p>Crete is a Greek island in the Mediterranean Sea.</p>
-      <h2>How?</h2>
-      <p>You can reach Chania airport from all over Europe.</p>
+    <link rel="stylesheet" type="text/css" href="StyleSheet/common_style.css">
+  </head>
+  
+  <body>
+<!--    container containig grid view elements-->
+    <div id=grid-container-index>
+      <div class="progress"></div>
+      <!--      REFERNECE https://www.w3schools.com/howto/howto_html_include.asp-->
+      
+      <header class="gridArea" w3-include-html="external_header.html"></header> 
+      <!--    displays the page scroll progress bar-->
+      
+      <nav class="grid-area" w3-include-html="external_nav.html"></nav>
+      
+      <aside class="fpAccessibility gridArea">
+                  <!--REFERENCE - WD weem 14 video 2 t=15:45      -->
+        <div class="fontSize float-right "> 
+          <p>
+            <span class="fontSize__span small" id="smallA">A</span>
+            <span class="fontSize__span medium" id="mediumA">A</span>
+            <span class="fontSize__span large" id="largeA">A</span>
+          </p>
+        </div>
+      
+        <div class="theme float-right">
+          <p>
+            <span class="theme__span theme__span--bright" id="makeBright">Bright</span>  
+            <span class="theme__span  theme__span--dark" id="makeDark">Dark</span>
+          </p>
+        </div>
+      
+    </aside>
+      
+      <aside class="breadcrumbs gridArea"`>
+        breadcrumbs to do</aside>
+        
+      <main class="gridArea"></main>
+      
+      <footer class="gridArea"><h2>FOOTER</h2></footer>
     </div>
-  </div>
-</div>
-
-<div class="footer">
-  <p>Resize the browser window to see how the content respond to the resizing.</p>
-</div>
-
+    
+  
+  
+<!--  SCRIPTS-->
+  <script src="scripts/firstScript.js"></script>
+  <script>
+    includeHTML()
+  </script>
 </body>
-
 </html>

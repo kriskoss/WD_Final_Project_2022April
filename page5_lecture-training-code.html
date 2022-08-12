@@ -10,128 +10,274 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="refresh" content="600">
     <meta name="keywords" content="to be updated">
-    <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
-  
+    <link rel="stylesheet" type="text/css" href="StyleSheet/common_style.css">
+    
+    <!-- handlebar.js    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
+    <!-- scripts related to inserting an external html    -->
+    <script src="scripts/getFile.js">  </script>
+    <script src="scripts/insert_External_Elements.js"></script>
 </head>
   
 <body>
-  <div class="tryCatch_methodes">
-    <div class="input_line">
-      <input type="button" value="ClickMe-tryCatch active" onclick="try{nonExistFunction();}catch(ex){console.log('error caught')}"/>
-      <input type="button" value="ClickMe-tryCatch none" onclick="nonExistFunction()"/>
-    </div>
-    <h2>Try-catch method</h2>
-    <button id="btn1">btn-try-catch</button>
+  <div id=grid-container-index>    
+    <div class="progress_bar"></div>
+    <!--EXTERNAL CODE    -->
+    <header id="header__target" class="gridArea">
+        <script id="template" type="template/handlebars">{{>header__partial}}</script>
+        <script> 
+          insert_external_elements(
+            "header__target", 
+            "header__partial", 
+            "external_header.html"
+          );
+        </script> 
+      </header>
+    
+    <aside id="accesibility_target" class="gridArea fpAccessibility ">
+        <script id="template" type="template/handlebars">{{>accesibility_partial}}</script>
+        
+        <script> 
+          insert_external_elements(
+            "accesibility_target", 
+            "accesibility_partial", 
+            "external_accessibility.html"
+          );
+       </script>
+      </aside>
+      
+    <nav id="nav__target" class="gridArea">
+        <script id="template" type="template/handlebars">{{>nav__partial}}</script>
+        <script> 
+          insert_external_elements(
+            "nav__target", 
+            "nav__partial", 
+            "external_nav.html"
+          );
+        </script>
+      </nav>
+        
+    <footer id="footer__target" class="gridArea">
+        <script id="template" type="template/handlebars">{{>footer__partial}}</script>
+        <script>
+          insert_external_elements(
+            "footer__target",
+            "footer__partial",
+            "external_footer.html"
+          );
+        </script>
+      </footer>
+    <!--end EXTERNAL CODE    -->
     
     
-    //this 
-    <button id="btn2">btn-thisId</button>
-    <script>
-      //  try-catch
-      let btn1 = document.getElementById("btn1")
-      btn1.onclick = function() {
-        try {
-          sayhelloooo();
-        } 
-        catch(err) {
-          alert("no sayhelloooo funciton. Correct one sayhello()")
-        }
-      }
-    </script>
     
-    <script>
-    function sayhello() {
-      alert("heloo");
-    }
-//    onload event
-    window.onload= function(){
-      alert("onload alert")
-    }
-
-
-//    this.id
-    var btn2 = document.getElementById("btn2");
-    btn2.onclick= function(){
-      alert("this.id="+this.id);
-    } 
-
-
-  </script>
+    <aside class="breadcrumbs gridArea"`>
+        breadcrumbs to do</aside>
     
+    <main class="gridArea">
+      <h2>MAIN</h2>
+    </main>
+    
+    <article class="articleAtThisPage gridArea">
+      <h2>At this page:</h2>
+    </article>
+    
+    <aside id=asideUnderground class="gridArea underground__link" >
+      <h2>Underground Map:</h2>
+    </aside>
+    
+    <aside id=asideApps class="gridArea">
+      <h3>Apps</h3>
+    </aside>
   </div>
-    
-  <div class="event_listener_examples">
-    <h2>Week 14 - event listerners</h2>
-    <div class="eventHandler_onclick">
-      <h3>Event handler - simple example</h3>
-      <p>notice the use of a function(){} with every handler</p>
-      <button id="btn">Event handler - on click </button>
-    </div>
-    <script>
-      btn = document.getElementById("btn")
-      btn.onclick = function() {
-        alert("You have clicked me")
-      };
-    </script>
-
-    
-    <div class=eventListener_example>
-    
-    <button id="btn3">Event listener 1</button>  
-    <button id="btn4">Event listener 2</button>  
-    <script>
-      
-      
-      function changeText(c){
-        c.textContent="Mouse over"
-      }
-      
-      function restoreText(c){
-        c.textContent="Event listener"
-      }
-      
-      function once() {
-        alert("You have clicked me");
-      }
-      
-      function mouse() {
-        alert("Mouse is over me")
-      }
-      
-      btn3=document.getElementById("btn3");
-      btn3.addEventListener("click", once);
-      btn3.addEventListener("mouseout", mouse);
-      
-      btn4=document.getElementById("btn4");
-      btn4.addEventListener("click", once);
-      btn4.addEventListener("mouseover", function() {changeText(this)});
-      btn4.addEventListener("mouseout", function() {restoreText(this)});
-    </script>
-  </div>
-  </div>
-   
-  <div id="progress"></div>
   
-</body>
-  <footer>
-    <style>
-      body {
-        height: 2000px;
-        background: salmon;
+  
+  <div class="tryCatch_methodes">
+      <div class="input_line">
+        <input type="button" value="ClickMe-tryCatch active" onclick="try{nonExistFunction();}catch(ex){console.log('error caught')}"/>
+        <input type="button" value="ClickMe-tryCatch none" onclick="nonExistFunction()"/>
+      </div>
+      <h2>Try-catch method</h2>
+      <button id="btn1">btn-try-catch</button>
+
+
+      //this 
+      <button id="btn2">btn-thisId</button>
+      <script>
+        //  try-catch
+        let btn1 = document.getElementById("btn1")
+        btn1.onclick = function() {
+          try {
+            sayhelloooo();
+          } 
+          catch(err) {
+            alert("no sayhelloooo funciton. Correct one sayhello()")
+          }
+        }
+      </script>
+
+      <script>
+      function sayhello() {
+        alert("heloo");
       }
-      
-      #progress {
-        border-bottom: 20px solid green;
-        width: 20px;
-        position: fixed;
-        top: 3; left: 0;
+  //    onload event
+      window.onload= function(){
+        alert("onload alert")
       }
-    </style>
-    <script>
-      var bar = document.getElementById("progress");
-      window.addEventListener("scroll", function(){
-        bar.style.width = pageYOffset;
-      })
+
+
+  //    this.id
+      var btn2 = document.getElementById("btn2");
+      btn2.onclick= function(){
+        alert("this.id="+this.id);
+      } 
+
+
     </script>
-  </footer>
+
+    </div>
+
+  <div class="event_listener_examples">
+      <h2>Week 14 - event listerners</h2>
+      <div class="eventHandler_onclick">
+        <h3>Event handler - simple example</h3>
+        <p>notice the use of a function(){} with every handler</p>
+        <button id="btn">Event handler - on click </button>
+      </div>
+      <script>
+        btn = document.getElementById("btn")
+        btn.onclick = function() {
+          alert("You have clicked me")
+        };
+      </script>
+
+
+      <div class=eventListener_example>
+
+      <button id="btn3">Event listener 1</button>  
+      <button id="btn4">Event listener 2</button>  
+      <script>
+
+        function once() {
+          alert("You have clicked me");
+        }
+
+        function mouse() {
+          alert("Mouse is over me")
+        }
+
+        btn3=document.getElementById("btn3");
+        btn3.addEventListener("click", once);
+        btn3.addEventListener("mouseout", mouse);
+
+        btn4=document.getElementById("btn4");
+        btn4.addEventListener("click", once);
+        btn4.addEventListener("mouseover", function() {changeText(this)});
+        btn4.addEventListener("mouseout", function() {restoreText(this)});
+      </script>
+    </div>
+    </div>
+  
+  <div class="testing_Handlebar_Templates">
+    <div class="coursera gridArea">
+      <h1>COURSERA</h1>
+      <div class="app vid9.1.7">
+        <h2>Week 17 - video 9.1.7 What is Handlebars.js</h2>
+          <h3 id="target"></h3>
+
+          <script id="template" type="template/handlebars">
+           <b>{{title}}</b>
+           <p>{{subtitle}}</p>
+          </script>
+
+          <script>
+            let src = document.getElementById("template").innerHTML;
+            let template = Handlebars.compile(src);
+            let rendered = template({title: "title: <b>target ('escaped')</b>", subtitle:"subtitle: whatever I want"})
+            document.getElementById("target").innerHTML=rendered;
+          </script>
+      </div>
+      
+      <div class="app vid9.2.1">
+        <h2>Week 18 - video 9.2.1 Handelbars Helpers</h2>
+        <h3>Exaple 1 - Handlebars helpers "caps"</h3>
+        <div class="app example1">
+          
+          <script id="template_example1" type="template/handlebars">
+            <b>{{caps "text1" "text2"}}</b>
+          </script>
+          
+          <span id="target_example1"></span>
+          
+          <script>
+            let src_example1 = document.getElementById("template_example1").innerHTML;
+            let template_example1 = Handlebars.compile(src_example1);
+            
+            //registerHelper - additional line vs video 9.1.7
+            Handlebars.registerHelper("caps", function(text,text2){
+              return "Target example1: " + text.toUpperCase()+" and "+ text2;
+            });
+            
+            let rendered_example1 = template_example1(); // no need to pass in any DATA, since we pass it in in the HELPER (id=template)
+            document.getElementById("target_example1").innerHTML=rendered_example1;
+            
+          </script> 
+          
+        </div>
+          
+        <h3>Exaple 2 - Handlebars helpers "best seller list"</h3>
+        <div class="app Example2">
+          
+          <h3>Best Sellers</h3>
+          <script id="best_template" type="template/handlebars">
+            {{list bestsellers}}
+          </script>
+          
+          <span id="best_target"></span>
+          
+          <script>
+            let best_src = document.getElementById("best_template").innerHTML;
+            let best_template = Handlebars.compile(best_src);
+            let best_rendered = best_template(
+              {title: "<b>South London Club</b>", 
+               subtitle:"best books"})
+            document.getElementById("best_target").innerHTML=best_rendered;
+          </script>
+        </div>
+      </div>
+    
+    </div>
+    
+    <div class="youtube gridArea">
+      <h1>YOUTUBE</h1>
+      <div class="app basic_handlebars">
+      <h2>Basic Handlebars</h2>  
+  <!--    <script id="people-template" type="text/template">-->
+      <script id="people-template" type="template/handlebars">
+        <h1>{{title}}</h1>
+        <ul class="people">
+          {{#people}}
+            <li class="person">
+              <h3>{{name}}</h3>
+              <div>Age: {{age}}</div>
+              <a href="mailto:{{email}}">Contact {{name}}</a>
+            </li>
+          {{/people}}
+        </ul>
+      </script> 
+      </div>
+      </div>
+    
+  </div>
+  
+  
+    
+  
+  <!--  SCRIPTS that has to be at the END of the BODY-->
+  <!--COMMON scripts  -->
+  <script src="scripts/progress_bar.js"></script>
+  <script src="scripts/accessibility__darkMode.js" defer></script>
+  <script src="scripts/accessibility__change_font_size.js" defer></script>
+</body>
+  
 </html>

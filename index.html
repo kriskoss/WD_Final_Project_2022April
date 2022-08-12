@@ -2,149 +2,162 @@
 <html lang= "en">
 
 <!-- This head section contains all the invisible information about the page -->
-<head>
+  <head>
     <title>WD final project - INDEX</title>
+    <meta name="description" content="Prototype website for the final project">  
+    <meta name="keywords" content="to be updated">
+    
     <meta charset="utf-8">
-    <meta name="description" content="Prototype website for the final project">
     <meta name="author" content="KK">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="refresh" content="600">
-    <meta name="keywords" content="to be updated">
     <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="StyleSheet/external_header.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/external_nav.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/external_footer.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/external_accessibility.css">
+    
+    <!-- SCRIPTS that must be int he HEAD-->
+    <!-- handlebar.js    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
+    
+    <!-- scripts related to inserting an external html    -->
+    <script src="scripts/getFile.js">  </script>
+    <script src="scripts/insert_External_Elements.js"></script>
 
-
-
+    
+  </head>
+  
   <body>
-    <div class="progress"></div>
-
+<!--    container containig grid view elements-->
     <div id=grid-container-index>
-    <aside class="fpAccessibility gridArea">
-                  <!--REFERENCE - WD weem 14 video 2 t=15:45      -->
-        <div class="fontSize float-right "> 
-          <p>
-            <span class="fontSize__span small" id="smallA">A</span>
-            <span class="fontSize__span medium" id="mediumA">A</span>
-            <span class="fontSize__span large" id="largeA">A</span>
-          </p>
-        </div>
-      
-        <div class="theme float-right">
-          <p>
-            <span class="theme__span theme__span--bright" id="makeBright">Bright</span>  
-            <span class="theme__span  theme__span--dark" id="makeDark">Dark</span>
-          </p>
-        </div>
-      
-    </aside>
-          
-    <header class="gridArea">
-      
-      
-      <img id="hidingLogo" src="Resources/VectorImages/Logo_of_Warsaw.svg.png" alt="official logo of Warsaw">
-      
-      <div id=fpTitleDiv>
-        <h1 class=fpTitleDiv__text>WARSAW<span class=redText>city FUNCLUB </span></h1>
-      </div>
-
-      <div id=fpLogoDiv>
-        <img src="Resources/VectorImages/waw_main.png" alt='Main image - warsaw skyline graphic'>
-      </div>
-    
-    
-    
-    
-  </header>
-    
-    <aside id="breadcrumbs"></aside>
-    
-    <nav class="gridArea">
-    <label for="toggle">&#9776;</label>
-    <input type="checkbox" id= "toggle"/>
-    <div id="menu">
-      <a href="index.html">1-day MUST see</a>
-      <a href="page1_grid-view.html">Caffees</a>
-      <a href="page2_my_grid-template.html">Kids Playgrounds</a>
-      <a href="page3_bootstrap.html">Events</a>
-      <a href="page4.html">Today</a>
-      <a href="page5_lecture-training-code.html">LECTURE TRAINING CODE</a>
-      <button class="button-printThisPage"onclick="window.print()">Print this page</button>
-    </div>
-  </nav>
-    
-    <main class="gridArea">
-      <section id ="fpIntro">
-        <h2>Website introducion</h2>
-        <ul>
-          <li>This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
-          <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
-          <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
-          <li>Each section is made by you for you. </li>
-          <li></li>
-          <li></li><li>This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
-          <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
-          <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
-          <li>Each section is made by you for you. </li>
-          <li></li>
-          <li></li><li>This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
-          <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
-          <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
-          <li>Each section is made by you for you. </li>
-          <li></li>
-          <li></li><li>This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
-          <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
-          <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
-          <li>Each section is made by you for you. </li>
-          <li></li>
-          <li></li>
-        </ul>
-      </section>
-    </main>
-    
-    <article class="articleAtThisPage gridArea">
-      <h2>At this page:</h2>
-      <ul>
-        <li>Introduction</li>
-        <li>Photos of Warsaw</li>
-        <li>What can you find at this website</li>
+      <div class="progress_bar">
         
-      </ul>
-    </article>
+      </div>
+      
+     
+      <header id="header__target" class="gridArea">
+        <script id="template" type="template/handlebars">{{>header__partial}}</script>
+        <script> 
+          insert_external_elements(
+            "header__target", 
+            "header__partial", 
+            "external_header.html"
+          );
+        </script> 
+      </header>
+                  
+      <aside id="accesibility_target" class="gridArea fpAccessibility">
+        <script id="template" type="template/handlebars">{{>accesibility_partial}}</script>
+        
+        <script> 
+          insert_external_elements(
+            "accesibility_target", 
+            "accesibility_partial", 
+            "external_accessibility.html"
+          );
+       </script>
+      </aside>
+      
+      <nav id="nav__target" class="grid-area">
+        <script id="template" type="template/handlebars">{{>nav__partial}}</script>
+        <script> 
+          insert_external_elements(
+            "nav__target", 
+            "nav__partial", 
+            "external_nav.html"
+          );
+        </script>
+      </nav>
+      
+      <aside class="breadcrumbs gridArea"`>
+        breadcrumbs to do</aside>
+        
+      <main class="gridArea">
+      
+<!--
+  <script>
+  window.onload= function(){
+      alert("Use beforeunload event somewhere!! ")
+    }
+  </script>
+-->    
+        <section id ="fpIntro">
+          <h2>Website introducion</h2>
+          <ul class="fpIntro_list">
+            <li >This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
+            <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
+            <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
+            <li>Each section is made by you for you. </li>
+          </ul>
+        </section>
+       
+        <section class="photos">
+          <h3>There are many interesting places to visit and enjoyful things to see here:</h3>
+          <img class="photos__img" src="Resources/Images/homepage/iluzjon.jpg">
+          <img class="photos__img" src="Resources/Images/homepage/scyscreapers.jpg">
+          <img class="photos__img" src="Resources/Images/homepage/costa.jpg">
+          <img class="photos__img" src="Resources/Images/homepage/playground.jpg">
+          <img class="photos__img" src="Resources/Images/homepage/sunset.jpg">
+          <img class="photos__img" src="Resources/Images/homepage/vespa.jpg">
+        </section>
+      
+      </main>
     
-    <aside id=asideUnderground class="gridArea underground__link" >
-    <h2>Underground Map:</h2>
-    <a href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>
-      <img class="underground__img" src="Resources/VectorImages/metroMap.png" alt="Warsaw metro diagram">
-    </a>
-  </aside>
+      <article class="articleAtThisPage gridArea">
+        <h2>At this page:</h2>
+        <ul>
+          <li>Introduction</li>
+          <li>Photos of Warsaw</li>
+          <li>What can you find at this website</li>
+
+        </ul>
+      </article>
     
-    <aside id=asideApps class="gridArea">
-    <h3>Apps:</h3>
-    <div class="app jakDojade">
-      <a class="app_link" href="https://jakdojade.pl/warszawa/trasa/">
-        <img class="app__img" src="Resources/Icons/jakdojadeIcon.webp" alt='JakDojade Application logo'>JakDojade
-      </a>
-      <p class="app__description">- the best app for public transport in Warsaw</p>
-    </div>
+      <aside id=asideUnderground class="gridArea underground__link" >
+      	<h2>Underground Map:</h2>
+        <a href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>
+          <img class="underground__img" src="Resources/VectorImages/metroMap.png" alt="Warsaw metro diagram">
+        </a>
+      </aside>
+    
+      <aside id=asideApps class="gridArea">
+      <h3>Apps:</h3>
+      <div class="app jakDojade">
+        <a class="app_link" href="https://jakdojade.pl/warszawa/trasa/">
+          <img class="app__img" src="Resources/Icons/jakdojadeIcon.webp" alt='JakDojade Application logo'>JakDojade
+        </a>
+        <p class="app__description">- the best app for public transport in Warsaw</p>
+      </div>
     
     
-    <div class="app veturilo">
-      <a class="app_link" href="https://veturilo.waw.pl/en/">
-        <img class="app__img" src="Resources/Icons/VeturiloLogo.svg" alt="Veturilo - Public Bikes logo">Veturilo
-      </a>
-      <p class="app__description">- Warsaw public bicycles</p>
-    </div>
+      <div class="app veturilo">
+        <a class="app_link" href="https://veturilo.waw.pl/en/">
+          <img class="app__img" src="Resources/Icons/VeturiloLogo.svg" alt="Veturilo - Public Bikes logo">Veturilo
+        </a>
+        <p class="app__description">- Warsaw public bicycles</p>
+      </div>
     
     
+    </aside>
     
-  </aside>
-    
-    <footer class="gridArea"><h2>FOOTER</h2></footer>
+    <footer id="footer__target" class="gridArea">
+        <script id="template" type="template/handlebars">{{>footer__partial}}</script>
+        <script>
+          insert_external_elements(
+            "footer__target",
+            "footer__partial",
+            "external_footer.html"
+          );
+        </script>
+      </footer>
     
   </div>
   
-<!--  SCRIPTS-->
-  <script src="scripts/firstScript.js">
-  </script>
+  <!--  SCRIPTS that has to be at the END of the BODY-->
+  <!--COMMON scripts  -->
+  <script src="scripts/progress_bar.js"></script>
+  <script src="scripts/accessibility__darkMode.js" defer></script>
+  <script src="scripts/accessibility__change_font_size.js" defer></script>
 </body>
 </html>

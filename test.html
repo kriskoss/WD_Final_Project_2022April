@@ -12,7 +12,7 @@
       
       #progress {
         border-bottom: 20px solid green;
-        width: 20%;
+        width: 0;
         position: fixed;
         top: 3; left: 0;
       }
@@ -21,7 +21,7 @@
     <script>
       var bar = document.getElementById("progress");
       window.addEventListener("scroll", function(){
-        bar.style.width = pageYOffset*100/(2000-window.innerHeight)+"%";
+        bar.style.width = pageYOffset+"px";
         console.log(bar.style.width, window.innerHeight)
         
       })

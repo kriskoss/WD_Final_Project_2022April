@@ -1,0 +1,49 @@
+
+
+.small  {font-size: 1.0em;}
+.medium {font-size: 1.5em;}
+.large  {font-size: 2.0em;}
+
+#smallA, #mediumA, #largeA {
+  cursor: pointer;
+}
+
+
+.fpAccessibility p  {
+  margin: 0;
+  
+}
+
+.theme {
+  
+}
+
+.theme__span {
+  cursor: pointer;
+}
+
+.fontSize {
+  
+}
+
+.fontSize__span {
+  
+}
+
+
+.theme__span:hover, .fontSize__span:hover {
+  border: 3px solid red;
+  border-radius: 5px;
+  
+}
+
+ .theme__span--dark {
+    color: beige;
+    background-color: darkslategray;
+  }
+
+.theme__span--bright  {
+    color: black;
+    background-color: white;
+  
+  }
