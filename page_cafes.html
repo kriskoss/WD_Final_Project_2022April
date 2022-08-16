@@ -2,12 +2,11 @@
 <html lang= "en">
 
 <!-- This head section contains all the invisible information about the page -->
-<head>
-    <title>WD final project - PAGE 5 LECTURE CODE TRAINING</title>
-    <meta name="description" content="Prototype website for the final project">
-    <meta name="keywords" content="to be updated">
+  <head>
+    <title>Cafés</title>
+    <meta name="description" content="List of recommended cafés in Warsaw ">  
+    <meta name="keywords" content="Café coffee Warsaw Warszawa">
     
-  
     <!-- ######## COMMON ###########    -->
     <!-- meta-->
     <meta charset="utf-8">
@@ -24,16 +23,24 @@
     <script src="scripts/getFile.js">  </script>
     <script src="scripts/insert_External_Elements.js"></script>
     <!--  ### END COMMON-->
+    
+    
+
+    
+
+    
+    
   
+  </head>
   
-</head>
-  
-<body>
-  <div id=grid-container-index>    
-    <div class="progress_bar"></div>
-    <!--EXTERNAL CODE    -->
-    <header id="header__target" class="gridArea">
+  <body>
+<!--    container containig grid view elements-->
+    <div id=grid-container-index>
+      <div class="progress_bar"></div>
+           
+      <header id="header__target" class="gridArea">
         <script id="template" type="template/handlebars">{{>header__partial}}</script>
+      
         <script> 
           insert_external_elements(
             "header__target", 
@@ -42,8 +49,8 @@
           );
         </script> 
       </header>
-    
-    <aside id="accesibility_target" class="gridArea fpAccessibility ">
+                  
+      <aside id="accesibility_target" class="gridArea fpAccessibility">
         <script id="template" type="template/handlebars">{{>accesibility_partial}}</script>
         
         <script> 
@@ -54,58 +61,52 @@
           );
        </script>
       </aside>
-      
-    <nav id="nav__target" class="gridArea">
+
+      <nav id="nav__target" class="grid-area">
         <script id="template" type="template/handlebars">{{>nav__partial}}</script>
         <script> 
           insert_external_elements(
             "nav__target", 
             "nav__partial", 
             "external_nav.html"
-          );
+          )
         </script>
       </nav>
-        
-    <footer id="footer__target" class="gridArea">
-        <script id="template" type="template/handlebars">{{>footer__partial}}</script>
-        <script>
-          insert_external_elements(
-            "footer__target",
-            "footer__partial",
-            "external_footer.html"
-          );
-        </script>
-      </footer>
-    <!--end EXTERNAL CODE    -->
-    
-    
-    
-    <aside class="breadcrumbs gridArea"`>
+      
+      <aside class="breadcrumbs gridArea"`>
         breadcrumbs to do</aside>
+        
+      <main class="gridArea">
+      
+        <section id="cafe_target" class="gridArea">
+          <script id="cafe_template" type="template/handlebars">
+            <h1>{{title}}</h1>
+              {{#cafes}}
+                <div class="cafe">
+                  <div class="cafe__image_box">
+                    <img class="cafe__img" src="{{img_path}}">
+                    <img class="cafe__logo" src="{{logo_path}}">
+                  </div>
+                  <h4 class="cafe__name">{{name}}</h4>
+                  <p class="cafe__description">{{description}}</p>
+                </div>
+              {{/cafes}}
+
+          </script> 
+        
+        <script src="scripts/template_data_cafe.js"></script>
+      </section>
+      
+      </main>
+      
+      <footer class="gridArea"><h2>FOOTER</h2></footer>
+    </div>
     
-    <main class="gridArea">
-      <h2>MAIN</h2>
-    </main>
-    
-    <article class="articleAtThisPage gridArea">
-      <h2>At this page:</h2>
-    </article>
-    
-    <aside id=asideUnderground class="gridArea underground__link" >
-      <h2>Underground Map:</h2>
-    </aside>
-    
-    <aside id=asideApps class="gridArea">
-      <h3>Apps</h3>
-    </aside>
-  </div>
   
- 
-  <!--  SCRIPTS that has to be at the END of the BODY-->
   <!--COMMON scripts  -->
   <script src="scripts/progress_bar.js"></script>
   <script src="scripts/accessibility__darkMode.js" defer></script>
-  <script src="scripts/accessibility__change_font_size.js" defer></script>
+  <script src="scripts/accessibility__change_font_size.js" defer></script>  
+
 </body>
-  
 </html>

@@ -1,0 +1,1 @@
+import {smallA, mediumA, largeA, changeSize} from "./Scripts/accessibility__change_font_size.js"

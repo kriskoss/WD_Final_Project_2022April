@@ -54,10 +54,14 @@ div {
   color: beige;
 }
 body{
-  
+    
 }
 body.darkMode-on{
   background-color: black;
+}
+
+main {
+  
 }
 
 h1 {
@@ -157,7 +161,7 @@ footer{grid-area: footer}
 /*Layout*/
 #grid-container-index {
   display: grid;
-
+  
 }
 
 @media screen and (max-width: 570px) {
@@ -262,10 +266,6 @@ footer{grid-area: footer}
 }
 
 
-
-
-
-
 /*#### TEST media print TEST*/
 @media print  {
   .fpAccessibility {
@@ -288,5 +288,77 @@ footer{grid-area: footer}
     'footer';
   }
   
+}
+
+
+/*PAGE - CAFE ####################*/
+
+:root {
+  --cafe__image_box_height: 200px;
+}
+.cafe {
+  display: block; 
+  height: 15%;
+  min-height: calc(var(--cafe__image_box_height) + 0px);
+  
+  margin: 5px;
+  background-color: hsl(44, 51%, 84%);
+  box-shadow: 0px 0px 8px hsl(44, 12%, 63%);
+  border-radius: 15px;
+  
+  }
+.cafe.darkMode-on {
+  background-color: hsla(44, 25%, 53%, 0.13);
+  box-shadow:none;
+}
+.cafe__image_box {
+  border-radius: 10px;
+  position: relative; /*necesary for cafe__logo positioning*/
+  float: right;
+  height: var(--cafe__image_box_height);
+  width:  auto;
+}
+
+
+@media screen and (max-width: 570px){
+  .cafe__image_box {
+    
+    float: none;
+    margin: auto; //*centers image in the container*/
+    
+    width: var(--cafe__image_box_height);
+    max-width: 100%;
+    height: var(--cafe__image_box_height);
+  }
+}
+
+.cafe__img {
+  border-radius: 10px;
+  height: 100%;
+  z-index: 1; /*postions an image under the logo*/  
+  
+}
+
+
+
+.cafe__logo {
+  border-radius: 10px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  
+  width:calc(var(--cafe__image_box_height) * 0.4);
+  height: auto;
+  z-index: 2;
+  
+}
+
+.cafe__name {
+  text-align: left;
+  padding: 10px;
+}
+
+.cafe__description {
+  padding: 20px;
 }
 

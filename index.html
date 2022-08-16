@@ -7,20 +7,18 @@
     <meta name="description" content="Prototype website for the final project">  
     <meta name="keywords" content="to be updated">
     
+    <!-- ######## COMMON ###########    -->
+    <!-- meta-->
     <meta charset="utf-8">
     <meta name="author" content="KK">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="refresh" content="600">
-    <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
-    <link rel="stylesheet" type="text/css" href="StyleSheet/external_header.css">
-    <link rel="stylesheet" type="text/css" href="StyleSheet/external_nav.css">
-    <link rel="stylesheet" type="text/css" href="StyleSheet/external_footer.css">
-    <link rel="stylesheet" type="text/css" href="StyleSheet/external_accessibility.css">
+    <meta name="refresh" content="600">    
     
-    <!-- SCRIPTS that must be int he HEAD-->
-    <!-- handlebar.js    -->
+    <!-- styles-->
+    <link rel="stylesheet" type="text/css" href="StyleSheet/common_style.css">
+      
+    <!-- scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
-    
     <!-- scripts related to inserting an external html    -->
     <script src="scripts/getFile.js">  </script>
     <script src="scripts/insert_External_Elements.js"></script>
@@ -38,6 +36,7 @@
      
       <header id="header__target" class="gridArea">
         <script id="template" type="template/handlebars">{{>header__partial}}</script>
+      
         <script> 
           insert_external_elements(
             "header__target", 
@@ -154,7 +153,7 @@
     
   </div>
   
-  <!--  SCRIPTS that has to be at the END of the BODY-->
+  
   <!--COMMON scripts  -->
   <script src="scripts/progress_bar.js"></script>
   <script src="scripts/accessibility__darkMode.js" defer></script>

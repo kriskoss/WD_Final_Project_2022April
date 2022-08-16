@@ -200,7 +200,7 @@
       
       <div class="app vid9.2.1">
         <h2>Week 18 - video 9.2.1 Handelbars Helpers</h2>
-        <h3>Exaple 1 - Handlebars helpers "caps"</h3>
+        <h3>Example 1 - Handlebars helpers "caps"</h3>
         <div class="app example1">
           
           <script id="template_example1" type="template/handlebars">
@@ -225,12 +225,16 @@
           
         </div>
           
-        <h3>Exaple 2 - Handlebars helpers "best seller list"</h3>
+        
+        
+        <h3>Example 2 - Handlebars helpers- "best seller list - Autmomatic escaping"</h3>
         <div class="app Example2">
           
           <h3>Best Sellers</h3>
+          
+            <!-- below list is a helper and bestsellers is a data which is passed into the helper-->
           <script id="best_template" type="template/handlebars">
-            {{list bestsellers}}
+            {{list bestsellers}} 
           </script>
           
           <span id="best_target"></span>
@@ -238,35 +242,161 @@
           <script>
             let best_src = document.getElementById("best_template").innerHTML;
             let best_template = Handlebars.compile(best_src);
+            
+            // here we need to tegister out helpers (in )
+            Handlebars.registerHelper("list", function(list){
+              let output = "<ol>";
+              for (var i in list) {
+                output+="<li>" + list[i]+ "</li>";
+              }
+              output+="</ol>";
+              return output;
+            });
+            
+            //it the line below we are passing the data into best_template
             let best_rendered = best_template(
-              {title: "<b>South London Club</b>", 
-               subtitle:"best books"})
+              {bestsellers:["list item 1", 
+                            "list item 2",
+                            "list item 3"]
+              }
+            );
             document.getElementById("best_target").innerHTML=best_rendered;
           </script>
         </div>
+        
+        
+        
+        <h3>Example 3 -  "best seller list" -Safe String (T=14:03)</h3>
+        <p>whole text inside output is treated as HTML - this can potentially break the website if left unchecked in case of user filled FORM</p>
+        <div class="app Example3_safestring">
+          
+          <h3>Best Sellers - with the safe string</h3>
+          
+            <!-- below list is a helper and bestsellers is a data which is passed into the helper-->
+          <script id="ex3_template" type="template/handlebars">
+            {{list bestsellers}} 
+          </script>
+          
+          <span id="ex3_target"></span>
+          
+          <script>
+            let ex3_src = document.getElementById("ex3_template").innerHTML;
+            let ex3_template = Handlebars.compile(ex3_src);
+            
+            // here we need to tegister out helpers (in )
+            Handlebars.registerHelper("list", function(list){
+              let output = "<div class='app'><h4>List rendered as HTML, not as text</h4>";
+              output+= "<ol>"
+              for (var i in list) {
+                output+="<li>" + list[i]+ "</li>";
+              }
+              output+="</ol></div>";
+              return new Handlebars.SafeString(output);
+            });
+            
+            //it the line below we are passing the data into ex3_template
+            let ex3_rendered = ex3_template(
+              {bestsellers:["list item 1", 
+                            "list item 2",
+                            "list item 3"]
+              }
+            );
+            document.getElementById("ex3_target").innerHTML=ex3_rendered;
+          </script>
+        </div>
+        
+        
+        
+        <h3>Example 4 -  "best seller list" - safe list (T=16:01)</h3>
+        <div class="app Example4_safelist">
+          <h3>Best Sellers - with the SAFE LIST</h3>
+          <p>Here the input list is being escaped. Then escaped HTML is being reintroduced in the code.</p>
+          
+            <!-- below list is a helper and bestsellers is a data which is passed into the helper-->
+          <script id="ex4_template" type="template/handlebars">
+            {{list bestsellers}} 
+          </script>
+          
+          <span id="ex4_target"></span>
+          
+          <script>
+            let ex4_src = document.getElementById("ex4_template").innerHTML;
+            let ex4_template = Handlebars.compile(ex4_src);
+            
+            // here we need to tegister out helpers (in )
+            Handlebars.registerHelper("list", function(list){
+              let output = "<div class='app'>"
+              output +="<h4>List rendered as HTML, not as text</h4>";
+              output+= "<ol>"
+              
+              for (var i in list) {
+//                output+= Handlebars.Utils.escapeExpression(list[i]);
+                output+="<li>" +Handlebars.Utils.escapeExpression(list[i])+ "</li>";
+              }
+              output+="</ol></div>";
+              return new Handlebars.SafeString(output);
+            });
+            
+            //it the line below we are passing the data into ex4_template
+            let ex4_rendered = ex4_template(
+              {bestsellers:["list item A", 
+                            "list item B",
+                            "list item C"]
+              }
+            );
+            document.getElementById("ex4_target").innerHTML=ex4_rendered;
+          </script>
+        </div>
       </div>
-    
     </div>
     
     <div class="youtube gridArea">
       <h1>YOUTUBE</h1>
+<!--
+  
       <div class="app basic_handlebars">
-      <h2>Basic Handlebars</h2>  
-  <!--    <script id="people-template" type="text/template">-->
-      <script id="people-template" type="template/handlebars">
-        <h1>{{title}}</h1>
-        <ul class="people">
-          {{#people}}
-            <li class="person">
-              <h3>{{name}}</h3>
-              <div>Age: {{age}}</div>
-              <a href="mailto:{{email}}">Contact {{name}}</a>
-            </li>
-          {{/people}}
-        </ul>
-      </script> 
+        <h2>Basic Handlebars</h2>  
+        <section id="targer"></section>
+        
+      <script id="people-template" type="text/template">
+        <script id="people_template" type="template/handlebars">
+          <h1>{{title}}</h1>
+          <ul class="people">
+            {{#cafes}}
+              <li class="person">
+                <h4>{{name}}</h4>
+                <img src="{{img_path}}">
+                <p>{{description}}</p>
+              </li>
+            {{/cafes}}
+          </ul>
+        </script> 
+        
+        <script src="scripts/template_data.js"></script>
       </div>
+      
+-->
+      <div class="app basic_my_modification">
+        <h2>Basic Handlebars</h2>  
+        <section id="cafe_target" class="gridArea"></section>
+        
+        <script id="cafe_template" type="template/handlebars">
+          <h1>{{title}}</h1>
+            {{#cafes}}
+              <div class="cafe cafe_background">
+                <h4 class="cafe__name">{{name}}</h4>
+                <img class="cafe__img" src="{{img_path}}">
+                <p class="cafe__description">{{description}}</p>
+              </div>
+            {{/cafes}}
+          
+        </script> 
+        
+        <script src="scripts/template_data_cafe.js"></script>
       </div>
+      
+      
+    </div>
     
   </div>
   
