@@ -70,14 +70,15 @@
         breadcrumbs to do</aside>
             
     <main>
-      <section id="must_see__target" class="gridArea">
+      <section id="must_see__target" >
           <script id="must_see__template" type="template/handlebars">
             <h1>{{title}}</h1>
               {{#places}}
-                <div class="place app">
-                  <h4 class="cafe__name">{{name}}</h4>
-                  <p class="cafe__description">{{description}}</p>
-                  <a href="{{link}}">See the official tourism site</a>
+                <div class="must_see">
+                  <h4 class="must_see__name">{{name}}</h4>
+                  <img class="must_see__img" src="{{image_path}}">
+                  <p class="must_see__description">{{description}}</p>
+                  <a href="{{link}}" class="must_see__link">See the official tourism site</a>
                 </div>
               {{/places}}
 

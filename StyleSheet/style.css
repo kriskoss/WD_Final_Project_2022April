@@ -11,13 +11,17 @@
     font-family: Arial, Helvetica, sans-serif;
 /*    border: 3px solid lightGray;*/
 }
+body {
+  font-size: 1.2em;
+}
+
 
 img{
   
 }
 
 img.darkMode-on {
-  filter: brightness(0.8);
+  filter: brightness(0.7);
 }
 
 button {
@@ -109,8 +113,8 @@ h2.darkMode-on {
 .gridArea {
   background-color: hsl(0,5%,95%);
   border-radius: 10px;
-  margin: 5px;
-  padding: 5px;
+  margin: 0.5vw;
+  padding: 0.5vw;
     
 }
 .gridArea.darkMode-on{
@@ -141,12 +145,15 @@ footer{grid-area: footer}
 /*Index.html CSS------------------------------------*/
 /*index.html main*/
 .photos {
-  
+  overflow: auto;
 }
 .photos__img {
-  width: 400px;
-  height: 250px;
-  object-fit: cover;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  display: block;
+  margin: auto;
   
   
 }
@@ -226,7 +233,7 @@ footer{grid-area: footer}
   max-width: 300px;
   
   border-radius: 15px;
-  padding: 10px;
+  padding: 1vw;
   
   
 }
@@ -244,8 +251,8 @@ footer{grid-area: footer}
 /*ASIDE2 - Apps*/
 .app {
   display: block; 
-  margin: 5px;
-  padding: 5px;
+  margin: 0.5vw;
+  padding: 0.5vw;
   background-color: hsl(230, 30%, 90%);
   box-shadow: 5px 5px 10px gray;
   border-radius: 15px;
@@ -277,6 +284,8 @@ footer{grid-area: footer}
     }
   
   #grid-container-index {
+    width: 1500px;
+    
     grid-template-columns: auto;
     grid-template-areas:
     'header'
@@ -298,12 +307,12 @@ footer{grid-area: footer}
 }
 .cafe {
   display: block; 
-  height: 15%;
-  min-height: calc(var(--cafe__image_box_height) + 0px);
+  overflow: auto;
+/*  min-height: calc(var(--cafe__image_box_height) + 0px);*/
   
-  margin: 5px;
+  margin: 2vw;
   background-color: hsl(44, 51%, 84%);
-  box-shadow: 0px 0px 8px hsl(44, 12%, 63%);
+  box-shadow: -3px 3px 8px hsl(44, 12%, 63%);
   border-radius: 15px;
   
   }
@@ -311,38 +320,48 @@ footer{grid-area: footer}
   background-color: hsla(44, 25%, 53%, 0.13);
   box-shadow:none;
 }
+
+
 .cafe__image_box {
-  border-radius: 10px;
+  border-radius: 15px;
   position: relative; /*necesary for cafe__logo positioning*/
   float: right;
-  height: var(--cafe__image_box_height);
-  width:  auto;
+  max-width: var(--cafe__image_box_height);
+  height: auto;
+  margin-left: 1vw;
 }
 
 
 @media screen and (max-width: 570px){
   .cafe__image_box {
-    
     float: none;
     margin: auto; //*centers image in the container*/
-    
-    width: var(--cafe__image_box_height);
     max-width: 100%;
-    height: var(--cafe__image_box_height);
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 571px) and (max-width: 1010px){
+  body.large .cafe__image_box {
+    float: none;
+    
+    max-width: 200px;
+    height: auto;
+    margin: auto; //*centers image in the container*/
+    border: 3px solid red;
   }
 }
 
 .cafe__img {
-  border-radius: 10px;
-  height: 100%;
+  margin: auto;
+  border-radius: 15px;
+  width: 100%;
   z-index: 1; /*postions an image under the logo*/  
   
 }
 
-
-
 .cafe__logo {
-  border-radius: 10px;
+  border-radius: 15px;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -355,10 +374,67 @@ footer{grid-area: footer}
 
 .cafe__name {
   text-align: left;
-  padding: 10px;
+  padding: 0.5vw;
 }
 
 .cafe__description {
-  padding: 20px;
+  padding: 0.5vw; 
 }
+
+/*PAGE - MUST_SEE##################################*/
+:root {
+  --must_see_max_width: 800px;
+}
+
+
+.must_see{
+  position: relative;
+  margin: 1vw;
+  
+  background-color: hsl(18, 21%, 90%);
+  box-shadow: 0px 0px 8px hsl(18, 21%, 63%);
+  border-radius: 15px;
+}
+
+.must_see.darkMode-on {
+  background-color: hsla(18, 21%, 90%, 0.13);
+  box-shadow:none;
+}
+
+
+.must_see__name{
+  padding: 1vw;
+}
+
+.must_see__img {
+  display: block; /*necessary to center an image inside div*/
+  position: relative; 
+
+  max-width: var(--must_see_max_width);
+  width: 90%;
+  height: auto;
+  margin: auto; /*necessary to center an image*/
+  
+  border-radius: 10px;
+  
+ }
+
+@media screen and (max-width: 570px){
+  .must_see__img {
+    width: 95%;
+  }
+}
+
+.must_see__description{
+  padding: 1vw;
+}
+.must_see__link {
+  display: block;
+  padding: 0.5vw;
+  padding-bottom: 2vw;
+}
+
+
+
+
 
