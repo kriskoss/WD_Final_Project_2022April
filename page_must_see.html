@@ -75,27 +75,56 @@
       </aside>
             
     <main>
-      <section id="must_see__target" class="gridArea">
-          <script id="must_see__template" type="template/handlebars">
+      <section id="must_see_main__target" class="gridArea">
+          <script id="must_see_main__template" type="template/handlebars">
             <h1>{{title}}</h1>
               {{#places}}
-                <div class="must_see">
-                  <h4 class="must_see__name">{{name}}</h4>
-                  <img class="must_see__img" src="{{image_path}}">
-                  <p class="must_see__description">{{description}}</p>
-                  <a href="{{link}}" class="must_see__link">See the official tourism site</a>
+                <div class="must_see_main__item" id="{{name}}">
+                  <h4 class="must_see_main__name">{{name}}</h4>
+                  <img class="must_see_main__img" src="{{image_path}}">
+                  <p class="must_see_main__description">{{description}}</p>
+                  <a href="{{link}}" class="must_see_main__link">See the official tourism site</a>
                 </div>
               {{/places}}
 
           </script> 
         
-        <script src="scripts/template_data__must_see.js"></script>
+        <script type="module" src="scripts/template__must_see_main.js"></script>
       </section>
+      
+      
+       
     </main>
     
-    <aside class="sidePanel">
+    
+      <aside class="sidePanel">
+        <section id="must_see_short__target" class="must_see_short gridArea">
+          <script id="must_see_short__template" type="template/handlebars">
+            <h3 class="must_see_short__heading">At this page:</h1>
+              {{#places}}
+                <ol class="must_see_short__list">
+                <li class="must_see_short__item">
+                  <img class="must_see_short__img" src="{{image_path}}">
+                  <span class="must_see_short__name">
+                    <a class="must_see_short__link" href="#{{name}}">
+                      <span class="must_see_short__symbol">
+                        &#x1F517
+                      </span>
+                      {{name}}
+                    </a>
+                  </span>
+                  
+                </li>
+                </ol>
+              {{/places}}
 
-    </aside>  
+          </script> 
+        
+        <script type="module" src="scripts/template__must_see_short.js"></script>
+      </section>
+       
+      </aside>  
+    
     
     <footer id="footer__target" class="footer gridArea">
         <script id="template" type="template/handlebars">{{>footer__partial}}</script>

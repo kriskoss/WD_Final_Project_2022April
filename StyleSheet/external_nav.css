@@ -70,6 +70,11 @@ margin: 1vw;
 
 
 }
+.menu__item.darkMode-on:hover {
+  border: 1px solid gray;
+  background-color: #151515;
+  border-radius: 3px;
+}
 #menu__label {
   cursor: pointer;
   font-size:28px;

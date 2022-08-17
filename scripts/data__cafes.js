@@ -6,7 +6,7 @@ export const path__starbucks="Resources/Images/common/Cafe__logo/starbucks__logo
 export const data = {
   title: "Best cafes",
   cafes: [
-    {name:"Nero Cafe Nowy Świat",
+    {name:"Nero Cafe - Nowy Świat",
      img_path:"Resources/Images/homepage/alley.jpg",
      logo_path: path__nero,
      description:"Always busy cafe in the main turistic street of Warsaw, the Nowy Świat Street",
@@ -17,11 +17,15 @@ export const data = {
      logo_path: path__starbucks,
      description:"Large Starbucks with a view to the main landmark of Warsaw - the Pałac Kultury i Nauki",},
 
-    {name:"Costa - Powiśle",
-     img_path:"Resources/Images/homepage/alley.jpg",
+    {name:"Costa - Pola Mokotowskie",
+     img_path:"Resources/Images/cafes/costa_moko.jpg",
      logo_path: path__costa,
-     description:"Nicel located Costa down from the Nowy Świat in the direction of the Wisła River",},
+     description:"Cafe next to the Pola Mokotowskie park and also Szkoła Główna Handlowa - one of the top economic universities in Poland",},
 
+    {name:"Nero Cafe - pl.Trzech Krzyży",
+     img_path:"Resources/Images/cafes/nero_unii.jpg",
+     logo_path: path__nero,
+     description:"Always busy cafe close to the city center area. Many restaurants in the vicinity",},
   ]
 };
 

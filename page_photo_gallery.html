@@ -2,10 +2,11 @@
 <html lang= "en">
 
 <!-- This head section contains all the invisible information about the page -->
-  <head>
-    <title>Cafés</title>
-    <meta name="description" content="List of recommended cafés in Warsaw ">  
-    <meta name="keywords" content="Café coffee Warsaw Warszawa">
+<head>
+    <title>City Photo Gallery</title>
+    <meta name="description" content="Website contain photos of interesting places in Warsaw">
+    <meta name="keywords" content="Warsaw city photos landmarks views">
+      
     
     <!-- ######## COMMON ###########    -->
     <!-- meta-->
@@ -23,21 +24,17 @@
     <script src="scripts/getFile.js">  </script>
     <script src="scripts/insert_External_Elements.js"></script>
     <!--  ### END COMMON-->
-    
-    
 
     
-
-    
-    
-  
   </head>
   
   <body>
 <!--    container containig grid view elements-->
     <div id=grid-container-index>
-      <div class="progress_bar"></div>
-           
+      <div class="progress_bar">
+        
+      </div>
+          
       <header id="header__target" class="gridArea">
         <script id="template" type="template/handlebars">{{>header__partial}}</script>
       
@@ -50,7 +47,7 @@
         </script> 
       </header>
                   
-      <aside id="accesibility_target" class=" accessibility">
+      <aside id="accesibility_target" class="accessibility">
         <script id="template" type="template/handlebars">{{>accesibility_partial}}</script>
         
         <script> 
@@ -61,7 +58,7 @@
           );
        </script>
       </aside>
-
+      
       <nav id="nav__target" class="navBar" >
         <script id="template" type="template/handlebars">{{>nav__partial}}</script>
         <script> 
@@ -72,66 +69,62 @@
           );
         </script>
       </nav>
-      
+
       <aside class="breadcrumbs">
         <span class="breadcrumbs__text">
           <a class="bradcrumbs__link" href="index.html" >Home Page</a>
-          &#x232A
-          <strong class="breadcrumbs__at">Cafes</strong>
+            &#x232A
+          <strong class="breadcrumbs__at">Warsaw Photo Gallery</strong>
         </span>  
       </aside>
-        
-      <main class="gridArea">
-      
-        <section id="cafes_main_target" class="cafe_main gridArea">
-          <script id="cafes_main_template" type="template/handlebars">
-            <h1>{{title}}</h1>
-              {{#cafes}}
-                <div class="cafe_main__item" id="{{name}}">
-                  <div class="cafes_main__image_box">
-                    <img class="cafes_main__img" src="{{img_path}}">
-                    <img class="cafes_main__logo" src="{{logo_path}}">
-                  </div>
-                  <h4 class="cafes_main__name">{{name}}</h4>
-                  <p class="cafes_main__description">{{description}}</p>
-                </div>
-              {{/cafes}}
-
-          </script> 
-        
-        <script type="module" src="scripts/template__cafes_main.js"></script>
-      </section>
-      
-      </main>
       
       <aside class="sidePanel">
-        <section id="cafes_short__target" class="cafes_short gridArea"> 
-          <script id="cafes_short__template" type="template/handlebars">
-            <h4 class="cafes_short__title">At this page:</h4>
-            <ol class="cafes_short__list">
-            {{#cafes}}
-              <li class="cafes_short__item">
-                <img class="cafes_short__logo" src="{{logo_path}}">
-                <span class="cafes_short__name">
-                  <a class="cafes_short__link" href="#{{name}}">
-                    <span class="cafes_short__symbol">
-                      &#x1F517
-                    </span>
-                    {{name}}
-                  </a>
-                </span>
-              </li>
-
-            {{/cafes}}
-            </ol>
-          </script>
-
-          <script type="module" src="scripts/template__cafes_short.js"></script>
+        <section class="articleAtThisPage gridArea">
+          <h2>At this page:</h2>
+          <ul>
+            <li>Introduction</li>
+            <li>Photos of Warsaw</li>
+            
+          </ul>
         </section>
+              
+        <section class="underground gridArea">
+          <label for="underground__toggle" id="underground__label">&#x25BE Underground Map</label>
+          <input type="checkbox" id="underground__toggle">
+          
+          <div class="underground__area">
+            <h2 class="underground__heading">Underground Map:</h2>
+            <a class="underground__link"href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>
+              <img class="underground__img" src="Resources/VectorImages/metroMap.png" alt="Warsaw metro diagram">
+            </a>
+          </div>
+        </section>
+    
+        <section class="apps gridArea">
+          <label for="apps__toggle" id="apps__label">&#x25BE Apps</label>
+          <input type="checkbox" id="apps__toggle">
+          <div class="apps__hidingArea">
+            <h3 class="apps__heading">Apps:</h3>
+            <div class="app">
+              <a class="app_link" href="https://jakdojade.pl/warszawa/trasa/">
+                <img class="app__img" src="Resources/Icons/jakdojadeIcon.webp" alt='JakDojade Application logo'>JakDojade
+              </a>
+              <p class="app__description">- the best app for public transport in Warsaw</p>
+            </div>
+
+
+            <div class="app">
+              <a class="app_link" href="https://veturilo.waw.pl/en/">
+                <img class="app__img" src="Resources/Icons/VeturiloLogo.svg" alt="Veturilo - Public Bikes logo">Veturilo
+              </a>
+              <p class="app__description">- Warsaw public bicycles</p>
+            </div>
+          </div>
+        </section>
+      
       </aside>  
       
-
-      <footer id="footer__target" class="footer gridArea">
+    <footer id="footer__target" class="footer gridArea">
         <script id="template" type="template/handlebars">{{>footer__partial}}</script>
         <script>
           insert_external_elements(
@@ -142,13 +135,10 @@
         </script>
       </footer>
     
-    </div>
-    
+  </div>  
   
-  <!--COMMON scripts  -->
-  <script src="scripts/progress_bar.js"></script>
-  <script src="scripts/accessibility__darkMode.js" defer></script>
-  <script src="scripts/accessibility__change_font_size.js" defer></script>  
-
 </body>
+
+
+
 </html>

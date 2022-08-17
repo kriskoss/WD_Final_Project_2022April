@@ -27,7 +27,7 @@ function darkMode(c) {
   //REFERNECE: https://stackoverflow.com/questions/7184562/how-to-get-elements-with-multiple-classes
   //Selection of the elemetns that will be affected by the darkMode
   let allElelmens = document.querySelectorAll(
-    "body, main, button, a, h2, img, .gridArea, .app, .fpTitleDiv__text, .fpTitleDiv__text .redText, #fpLogoDiv, .progress_bar, .cafe, .must_see, #apps__label, #underground__label, #menu__label"
+    "body, main, button, a, h2, img, .gridArea, .app, .fpTitleDiv__text, .fpTitleDiv__text .redText, #fpLogoDiv, .progress_bar, .cafe_main, .cafe_main__item, .cafe_short, .must_see_main, .must_see_main__item .must_see_short, #apps__label, #underground__label, #menu__label"
   );
   // If darkMode true then darkMode-on calss is added to queried elements, otherwise it is being removed
   for (let i=0; i<allElelmens.length; i++){

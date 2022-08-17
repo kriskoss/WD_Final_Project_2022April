@@ -1,12 +1,15 @@
 /*PAGE - CAFE ####################*/
 
 :root {
-  --cafe__image_box_height: 200px;
+  --cafes_main__image_box_height: 200px;
 }
-.cafe {
+.cafe_main {
+  
+}
+.cafe_main__item {
   display: block; 
   overflow: auto;
-/*  min-height: calc(var(--cafe__image_box_height) + 0px);*/
+/*  min-height: calc(var(--cafes_main__image_box_height) + 0px);*/
   
   margin: 2vw;
   background-color: hsl(44, 51%, 84%);
@@ -14,24 +17,24 @@
   border-radius: 15px;
   
   }
-.cafe.darkMode-on {
+.cafe_main__item.darkMode-on {
   background-color: hsla(44, 25%, 53%, 0.13);
   box-shadow:none;
 }
 
 
-.cafe__image_box {
+.cafes_main__image_box {
   border-radius: 15px;
-  position: relative; /*necesary for cafe__logo positioning*/
+  position: relative; /*necesary for cafes_main__logo positioning*/
   float: right;
-  max-width: var(--cafe__image_box_height);
+  max-width: var(--cafes_main__image_box_height);
   height: auto;
   margin-left: 1vw;
 }
 
 
 @media screen and (max-width: 570px){
-  .cafe__image_box {
+  .cafes_main__image_box {
     float: none;
     margin: auto; //*centers image in the container*/
     max-width: 100%;
@@ -40,7 +43,7 @@
 }
 
 @media screen and (min-width: 571px) and (max-width: 1010px){
-  body.large .cafe__image_box {
+  body.large .cafes_main__image_box {
     float: none;
     
     max-width: 200px;
@@ -50,7 +53,7 @@
   }
 }
 
-.cafe__img {
+.cafes_main__img {
   margin: auto;
   border-radius: 15px;
   width: 100%;
@@ -58,58 +61,75 @@
   
 }
 
-.cafe__logo {
+.cafes_main__logo {
   border-radius: 15px;
   position: absolute;
   left: 0px;
   top: 0px;
   
-  width:calc(var(--cafe__image_box_height) * 0.4);
+  width:calc(var(--cafes_main__image_box_height) * 0.4);
   height: auto;
   z-index: 2;
   
 }
 
-.cafe__name {
+.cafes_main__name {
   text-align: left;
   padding: 0.5vw;
 }
 
-.cafe__description {
+.cafes_main__description {
   padding: 0.5vw; 
 }
 
 
-/*cafeShort list #########################*/
-.cafeShort{
+/*cafes_short_ list #########################*/
+.cafes_short {
   padding: 5px;
   color: gray;
 }
 
-.cafeShort__title{
+.cafes_short__title{
   margin: 5px;
   
     
 }
-.cafeShort__list {
+.cafes_short__list {
   list-style-type: none;
   padding-left: 0;
   
 }
 
-.cafeShort__item{
+.cafes_short__item {
     padding: 5px
 }
 
-.cafeShort__logo{
+.cafes_short__logo{
   width: 30px;
   height: auto;
   vertical-align: middle
 }
 
-.cafeShort__name, .cafeShort__link {
+.cafes_short__name, .cafes_short__link {
   color: gray;
   font-size: 0.9em;
+  text-decoration: none;
   
+}
+
+.cafes_short__link:hover {
+  background-color: bisque;
+}
+
+.cafes_short__link.darkMode-on:hover {
+  border: 1px solid gray;
+  background-color: #151515;
+  border-radius: 3px;
+}
+
+
+.cafes_short__symbol {
   
+  font-size: 0.7em;
+  color: gray;
 }
