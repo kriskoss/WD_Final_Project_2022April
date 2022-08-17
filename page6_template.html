@@ -43,7 +43,7 @@
         </script> 
       </header>
     
-    <aside id="accesibility_target" class="gridArea fpAccessibility ">
+    <aside id="accesibility_target" class="gridArea accessibility ">
         <script id="template" type="template/handlebars">{{>accesibility_partial}}</script>
         
         <script> 
@@ -55,7 +55,7 @@
        </script>
       </aside>
       
-    <nav id="nav__target" class="gridArea">
+   <nav id="nav__target" class="navBar" >
         <script id="template" type="template/handlebars">{{>nav__partial}}</script>
         <script> 
           insert_external_elements(
@@ -80,24 +80,41 @@
     
     
     
-    <aside class="breadcrumbs gridArea"`>
+    <aside class="breadcrumbs">
         breadcrumbs to do</aside>
     
     <main class="gridArea">
       <h2>MAIN</h2>
     </main>
+    <aside class="sidePanel">
+      <section class="articleAtThisPage gridArea">
+        <h2>At this page:</h2>
+      </section>
+
+      <section class="underground gridArea">
+        <h2>Underground Map:</h2>
+      </section>
+
+      <section class="apps gridArea">
+        <h3>Apps</h3>
+      </section>  
+    </aside>  
     
-    <article class="articleAtThisPage gridArea">
-      <h2>At this page:</h2>
-    </article>
     
-    <aside id=asideUnderground class="gridArea underground__link" >
-      <h2>Underground Map:</h2>
-    </aside>
+     
+
+    <footer id="footer__target" class="footer gridArea">
+        <script id="template" type="template/handlebars">{{>footer__partial}}</script>
+        <script>
+          insert_external_elements(
+            "footer__target",
+            "footer__partial",
+            "external_footer.html"
+          );
+        </script>
+      </footer>
     
-    <aside id=asideApps class="gridArea">
-      <h3>Apps</h3>
-    </aside>
+    
   </div>
   
  

@@ -22,18 +22,17 @@
   
 </head>
 <body>
-  <nav>
-    <div id="menu">
-      <p>id="menu"</p>
-      <a href="index.html">index</a>
-      <a href="page1_grid-view.html">page1</a>
-      <a href="page2_my_grid-template.html">page2</a>
-      <a href="page3_bootstrap.html">page3</a>
-      <a href="page4.html">page4</a>
-      <a href="page5.html">page5</a>
-    </div>
-    
-  </nav>
+  <nav id="nav__target" class="navBar" >
+        <script id="template" type="template/handlebars">{{>nav__partial}}</script>
+        <script> 
+          insert_external_elements(
+            "nav__target", 
+            "nav__partial", 
+            "external_nav.html"
+          );
+        </script>
+      </nav>
+  
   <div class="container p-3 my-3 border">
     <h1>My First Bootstrap Page</h1>
     <p>This container has a border and some extra padding and margins.</p>

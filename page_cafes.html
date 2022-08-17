@@ -50,7 +50,7 @@
         </script> 
       </header>
                   
-      <aside id="accesibility_target" class="gridArea fpAccessibility">
+      <aside id="accesibility_target" class=" accessibility">
         <script id="template" type="template/handlebars">{{>accesibility_partial}}</script>
         
         <script> 
@@ -62,19 +62,24 @@
        </script>
       </aside>
 
-      <nav id="nav__target" class="grid-area">
+      <nav id="nav__target" class="navBar" >
         <script id="template" type="template/handlebars">{{>nav__partial}}</script>
         <script> 
           insert_external_elements(
             "nav__target", 
             "nav__partial", 
             "external_nav.html"
-          )
+          );
         </script>
       </nav>
       
-      <aside class="breadcrumbs gridArea"`>
-        breadcrumbs to do</aside>
+      <aside class="breadcrumbs">
+        <span class="breadcrumbs__text">
+          <a class="bradcrumbs__link" href="index.html" >Home Page</a>
+          &#x232A
+          <strong class="breadcrumbs__at">Cafes</strong>
+        </span>  
+      </aside>
         
       <main class="gridArea">
       
@@ -82,7 +87,7 @@
           <script id="cafe_template" type="template/handlebars">
             <h1>{{title}}</h1>
               {{#cafes}}
-                <div class="cafe">
+                <div class="cafe" id="{{name}}">
                   <div class="cafe__image_box">
                     <img class="cafe__img" src="{{img_path}}">
                     <img class="cafe__logo" src="{{logo_path}}">
@@ -94,12 +99,42 @@
 
           </script> 
         
-        <script src="scripts/template_data_cafe.js"></script>
+        <script type="module" src="scripts/template_cafes__main.js"></script>
       </section>
       
       </main>
       
-      <footer class="gridArea"><h2>FOOTER</h2></footer>
+      <aside class="sidePanel">
+        <section id="cafeShort_target" class="cafeShort gridArea"> 
+          <script id="cafeShort_template" type="template/handlebars">
+            <h4 class="cafeShort__title">At this page:</h4>
+                  <ol class="cafeShort__list">
+                  {{#cafes}}
+                    <li class="cafeShort__item">
+                      <img class="cafeShort__logo" src="{{logo_path}}">
+                      <span class="cafeShort__name"><a class="cafeShort__link" href="#{{name}}">{{name}}&#x1F517;</a></span>
+                    </li>
+
+                  {{/cafes}}
+                  </ol>
+          </script>
+
+          <script type="module" src="scripts/template_cafes__cafeShort.js"></script>
+        </section>
+      </aside>  
+      
+
+      <footer id="footer__target" class="footer gridArea">
+        <script id="template" type="template/handlebars">{{>footer__partial}}</script>
+        <script>
+          insert_external_elements(
+            "footer__target",
+            "footer__partial",
+            "external_footer.html"
+          );
+        </script>
+      </footer>
+    
     </div>
     
   

@@ -1,0 +1,52 @@
+/*PAGE - MUST_SEE##################################*/
+:root {
+  --must_see_max_width: 800px;
+}
+
+
+.must_see{
+  position: relative;
+  margin: 1vw;
+  
+  background-color: hsl(18, 21%, 90%);
+  box-shadow: 0px 0px 8px white;
+  border-radius: 15px;
+}
+
+.must_see.darkMode-on {
+  background-color: hsla(18, 21%, 90%, 0.13);
+  box-shadow:none;
+}
+
+
+.must_see__name{
+  padding: 1vw;
+}
+
+.must_see__img {
+  display: block; /*necessary to center an image inside div*/
+  position: relative; 
+
+  max-width: var(--must_see_max_width);
+  width: 90%;
+  height: auto;
+  margin: auto; /*necessary to center an image*/
+  
+  border-radius: 10px;
+  
+ }
+
+@media screen and (max-width: 570px){
+  .must_see__img {
+    width: 95%;
+  }
+}
+
+.must_see__description{
+  padding: 1vw;
+}
+.must_see__link {
+  display: block;
+  padding: 0.5vw;
+  padding-bottom: 2vw;
+}

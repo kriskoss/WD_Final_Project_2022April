@@ -3,7 +3,7 @@
 
 <!-- This head section contains all the invisible information about the page -->
   <head>
-    <title>WD final project - INDEX</title>
+    <title>Warsaw Funclub HomePage</title>
     <meta name="description" content="Prototype website for the final project">  
     <meta name="keywords" content="to be updated">
     
@@ -47,7 +47,7 @@
         </script> 
       </header>
                   
-      <aside id="accesibility_target" class="gridArea fpAccessibility">
+      <aside id="accesibility_target" class="accessibility">
         <script id="template" type="template/handlebars">{{>accesibility_partial}}</script>
         
         <script> 
@@ -59,7 +59,7 @@
        </script>
       </aside>
       
-      <nav id="nav__target" class="gridArea">
+      <nav id="nav__target" class="navBar" >
         <script id="template" type="template/handlebars">{{>nav__partial}}</script>
         <script> 
           insert_external_elements(
@@ -70,8 +70,11 @@
         </script>
       </nav>
       
-      <aside class="breadcrumbs gridArea"`>
-        breadcrumbs to do</aside>
+      <aside class="breadcrumbs">
+        <span class="breadcrumbs__text">
+          <strong class="breadcrumbs__at">Home Page</strong>
+        </span>  
+      </aside>
         
       <main class="gridArea">
       
@@ -103,45 +106,54 @@
         </section>
       
       </main>
+      <aside class="sidePanel">
+        <section class="articleAtThisPage gridArea">
+          <h2>At this page:</h2>
+          <ul>
+            <li>Introduction</li>
+            <li>Photos of Warsaw</li>
+            
+          </ul>
+        </section>
+      
+        
+        <section class="underground gridArea">
+          <label for="underground__toggle" id="underground__label">&#x25BE Underground Map</label>
+          <input type="checkbox" id="underground__toggle">
+          
+          <div class="underground__area">
+            <h2 class="underground__heading">Underground Map:</h2>
+            <a class="underground__link"href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>
+              <img class="underground__img" src="Resources/VectorImages/metroMap.png" alt="Warsaw metro diagram">
+            </a>
+          </div>
+        </section>
     
-      <article class="articleAtThisPage gridArea">
-        <h2>At this page:</h2>
-        <ul>
-          <li>Introduction</li>
-          <li>Photos of Warsaw</li>
-          <li>What can you find at this website</li>
+        <section class="apps gridArea">
+          <label for="apps__toggle" id="apps__label">&#x25BE Apps</label>
+          <input type="checkbox" id="apps__toggle">
+          <div class="apps__hidingArea">
+            <h3 class="apps__heading">Apps:</h3>
+            <div class="app">
+              <a class="app_link" href="https://jakdojade.pl/warszawa/trasa/">
+                <img class="app__img" src="Resources/Icons/jakdojadeIcon.webp" alt='JakDojade Application logo'>JakDojade
+              </a>
+              <p class="app__description">- the best app for public transport in Warsaw</p>
+            </div>
 
-        </ul>
-      </article>
+
+            <div class="app">
+              <a class="app_link" href="https://veturilo.waw.pl/en/">
+                <img class="app__img" src="Resources/Icons/VeturiloLogo.svg" alt="Veturilo - Public Bikes logo">Veturilo
+              </a>
+              <p class="app__description">- Warsaw public bicycles</p>
+            </div>
+          </div>
+        </section>
+      
+      </aside>  
     
-      <aside id=asideUnderground class="gridArea underground__link" >
-      	<h2>Underground Map:</h2>
-        <a href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>
-          <img class="underground__img" src="Resources/VectorImages/metroMap.png" alt="Warsaw metro diagram">
-        </a>
-      </aside>
-    
-      <aside id=asideApps class="gridArea">
-      <h3>Apps:</h3>
-      <div class="app jakDojade">
-        <a class="app_link" href="https://jakdojade.pl/warszawa/trasa/">
-          <img class="app__img" src="Resources/Icons/jakdojadeIcon.webp" alt='JakDojade Application logo'>JakDojade
-        </a>
-        <p class="app__description">- the best app for public transport in Warsaw</p>
-      </div>
-    
-    
-      <div class="app veturilo">
-        <a class="app_link" href="https://veturilo.waw.pl/en/">
-          <img class="app__img" src="Resources/Icons/VeturiloLogo.svg" alt="Veturilo - Public Bikes logo">Veturilo
-        </a>
-        <p class="app__description">- Warsaw public bicycles</p>
-      </div>
-    
-    
-    </aside>
-    
-    <footer id="footer__target" class="gridArea">
+      <footer id="footer__target" class="footer gridArea">
         <script id="template" type="template/handlebars">{{>footer__partial}}</script>
         <script>
           insert_external_elements(

@@ -134,12 +134,10 @@ h2.darkMode-on {
 
 /*GRID AREAS*/
 header { grid-area: header; }
-.fpAccessibility.gridArea {grid-area: accesibility;}
+.accessibility {grid-area: accesibility;}
 main {grid-area: main;}
 .breadcrumbs {grid-area: breadcrumbs;}
-#articleAtThisPage{grid-area: article;} 
-#asideUnderground{grid-area: aside1;}
-#asideApps{grid-area: aside2;}
+.sidePanel {grid-area: sidePanel;}
 footer{grid-area: footer}
 
 /*Index.html CSS------------------------------------*/
@@ -179,7 +177,8 @@ footer{grid-area: footer}
     'accesibility'
     'breadcrumbs'
     'nav'
-    'article'
+/*    'article'*/
+    'sidePanel'
     'main'
     'aside1'
     'aside2'
@@ -194,11 +193,11 @@ footer{grid-area: footer}
     'header header header '
     'breadcrumbs breadcrumbs accesibility'  
     'nav nav nav'
-    'article main main'
-    'none main main'
-    'none main main'
-    'none aside1 aside1'
-    'none aside2 aside2'
+    'sidePanel main main'
+/*    'none main main'*/
+/*    'none main main'*/
+/*    'none aside1 aside1'*/
+/*    'none aside2 aside2'*/
     'footer footer footer';
   }
 }
@@ -208,12 +207,7 @@ footer{grid-area: footer}
     grid-template-areas:
     'header header header'
     'breadcrumbs breadcrumbs accesibility'
-    'nav main article'
-    'nav main aside1'
-    'none main aside1'
-    'none main aside1'
-    'none main aside2'
-    'none main aside2'
+    'nav main sidePanel'
     'footer footer footer';
   }
 
@@ -222,33 +216,112 @@ footer{grid-area: footer}
 }
 
 /*ASIDE1 - Underground*/
+#apps__label, #underground__label {
+  cursor: pointer;
+  font-size:28px;
+  text-align: center;
+  color: gray;
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid gray  ;
+
+}
+#apps__label.darkMode-on, #underground__label.darkMode-on{
+  color: beige;
+  background-color: black;
+}
+
+.underground {
+  
+}
+
+.underground__area {
+  
+}
+
+#underground__toggle { /*removes checkbox near MENU label*/
+     display: none; 
+
+}
+
+@media screen and (max-width: 570px) {
+  
+    #underground__label { /*styles MENU symbol*/
+        display: block;
+        
+    }
+    
+    #underground__toggle:checked + .underground__area  { /*MENY symbol appears*/
+        display: block;
+      
+    }
+
+    .underground__area, .underground__heading { /*MENU hides when MESNU symbol clicked*/
+        display: none;
+        clear: right;
+    }
+
+}
+
+
+.underground__heading{
+  text-align: center;
+}
+
 .underground__link {
   text-align: center
 } 
 
 
 .underground__img {
-  
-  width: 90%;
-  max-width: 300px;
+  display: block;
+  width: 100%;
+  max-width: 600px;
   
   border-radius: 15px;
-  padding: 1vw;
+  margin: auto;
   
   
 }
-
-/*
-.underground__img.darkMode-on {
-    filter: brightness(0.8)
-  
-  
-}
-*/
-
 
 
 /*ASIDE2 - Apps*/
+.apps{
+  
+}
+
+
+#apps__toggle { /*removes checkbox near MENU label*/
+     display: none; 
+
+}
+
+@media screen and (max-width: 570px) {
+  
+    #apps__label, { /*styles MENU symbol*/
+        display: block;
+        
+    }
+    
+    #apps__toggle:checked + .apps__hidingArea  { /*MENY symbol appears*/
+        display: block;
+      
+    }
+
+    .apps__hidingArea, .apps__heading { /*MENU hides when MESNU symbol clicked*/
+        display: none;
+        clear: right;
+    }
+
+}
+/*
+@media screen and (max-width: 570px){
+  .apps {
+    display: none;
+  }
+}
+*/
+
 .app {
   display: block; 
   margin: 0.5vw;
@@ -275,7 +348,7 @@ footer{grid-area: footer}
 
 /*#### TEST media print TEST*/
 @media print  {
-  .fpAccessibility {
+  .accessibility {
     display: none;
     
   }
@@ -298,143 +371,4 @@ footer{grid-area: footer}
   }
   
 }
-
-
-/*PAGE - CAFE ####################*/
-
-:root {
-  --cafe__image_box_height: 200px;
-}
-.cafe {
-  display: block; 
-  overflow: auto;
-/*  min-height: calc(var(--cafe__image_box_height) + 0px);*/
-  
-  margin: 2vw;
-  background-color: hsl(44, 51%, 84%);
-  box-shadow: -3px 3px 8px hsl(44, 12%, 63%);
-  border-radius: 15px;
-  
-  }
-.cafe.darkMode-on {
-  background-color: hsla(44, 25%, 53%, 0.13);
-  box-shadow:none;
-}
-
-
-.cafe__image_box {
-  border-radius: 15px;
-  position: relative; /*necesary for cafe__logo positioning*/
-  float: right;
-  max-width: var(--cafe__image_box_height);
-  height: auto;
-  margin-left: 1vw;
-}
-
-
-@media screen and (max-width: 570px){
-  .cafe__image_box {
-    float: none;
-    margin: auto; //*centers image in the container*/
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 571px) and (max-width: 1010px){
-  body.large .cafe__image_box {
-    float: none;
-    
-    max-width: 200px;
-    height: auto;
-    margin: auto; //*centers image in the container*/
-    border: 3px solid red;
-  }
-}
-
-.cafe__img {
-  margin: auto;
-  border-radius: 15px;
-  width: 100%;
-  z-index: 1; /*postions an image under the logo*/  
-  
-}
-
-.cafe__logo {
-  border-radius: 15px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  
-  width:calc(var(--cafe__image_box_height) * 0.4);
-  height: auto;
-  z-index: 2;
-  
-}
-
-.cafe__name {
-  text-align: left;
-  padding: 0.5vw;
-}
-
-.cafe__description {
-  padding: 0.5vw; 
-}
-
-/*PAGE - MUST_SEE##################################*/
-:root {
-  --must_see_max_width: 800px;
-}
-
-
-.must_see{
-  position: relative;
-  margin: 1vw;
-  
-  background-color: hsl(18, 21%, 90%);
-  box-shadow: 0px 0px 8px hsl(18, 21%, 63%);
-  border-radius: 15px;
-}
-
-.must_see.darkMode-on {
-  background-color: hsla(18, 21%, 90%, 0.13);
-  box-shadow:none;
-}
-
-
-.must_see__name{
-  padding: 1vw;
-}
-
-.must_see__img {
-  display: block; /*necessary to center an image inside div*/
-  position: relative; 
-
-  max-width: var(--must_see_max_width);
-  width: 90%;
-  height: auto;
-  margin: auto; /*necessary to center an image*/
-  
-  border-radius: 10px;
-  
- }
-
-@media screen and (max-width: 570px){
-  .must_see__img {
-    width: 95%;
-  }
-}
-
-.must_see__description{
-  padding: 1vw;
-}
-.must_see__link {
-  display: block;
-  padding: 0.5vw;
-  padding-bottom: 2vw;
-}
-
-
-
-
 

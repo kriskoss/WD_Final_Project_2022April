@@ -1,0 +1,18 @@
+/*BREADCRUMBS styles*/
+.breadcrumbs {
+  
+}
+
+.breadcrumbs__text{
+color: gray;
+
+}
+
+.bradcrumbs__link{
+  color: gray;
+/*  text-decoration: none*/
+}
+
+.breadcrumbs__at{
+  
+}

@@ -1,8 +1,9 @@
-let path__nero="Resources/Images/common/Cafe__logo/nero__logo.png"
-let path__costa="Resources/Images/common/Cafe__logo/costa__logo.png"
-let path__starbucks="Resources/Images/common/Cafe__logo/starbucks__logo.png"
+export const path__nero="Resources/Images/common/Cafe__logo/nero__logo.png"
+export const path__costa="Resources/Images/common/Cafe__logo/costa__logo.png"
+export const path__starbucks="Resources/Images/common/Cafe__logo/starbucks__logo.png"
 
-let data = {
+
+export const data = {
   title: "Best cafes",
   cafes: [
     {name:"Nero Cafe Nowy Świat",
@@ -23,11 +24,4 @@ let data = {
 
   ]
 };
-
-let cafe_src = document.getElementById("cafe_template").innerHTML;
-let cafe_template = Handlebars.compile(cafe_src);
-let cafe_rendered = cafe_template(data)
-document.getElementById("cafe_target").innerHTML = cafe_rendered;
-      
-
 

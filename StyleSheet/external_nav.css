@@ -1,9 +1,16 @@
 /*Nav CSS-------------------------------------------*/
 
-nav { grid-area: nav; }
-
+.navBar { grid-area: nav; }
+  
+.navBar { 
+margin: 1vw;
 }
 
+@media print {
+  .navBar { 
+    display: none;
+  }
+}
 .menu__title {
   margin: 0;
   color: #79829d;
@@ -17,7 +24,7 @@ nav { grid-area: nav; }
   
 }
 
-.menu__item, .menu__print_button {
+.menu__item{
   display: block;
   max-width: 500px;
   
@@ -30,71 +37,67 @@ nav { grid-area: nav; }
   
   text-decoration: none; /*rmoves UNDERINE from links*/
   line-height: 1.5;
-  color: white;
   
-  background-color: #79829d;
-  box-shadow: 5px 5px 10px #adbbe6;
+  font-weight: bold;
+  
+  background-color: #717398;
+  color: white;
+  box-shadow: 2px 2px 10px #89a2d9;
   border-radius: 5px;
   
   
   
 }
-.menu__item.darkMode-on, .menu__print_button.darkMode-on{
+.menu__item.darkMode-on{
   background-color: rgba(121, 130, 157, 0.4);
-  box-shadow: 0px 0px 4px white;
+  box-shadow: none;
 } 
 
-.menu__print_button {
-  font-size: 1em;
-  background-color: #a09c98;
-  
-}
-.menu__print_button.darkMode-on {
-  display: none;
-}
 
 @media screen and (min-width: 571px) and (max-width: 1010px){
   .menu__item {
     display: inline;
     margin: 1vw;
   }
-  .menu__print_button{
-    display: inline;
-    `
-  }
 }
 
 
 
 /* Change color on hover */
-.menu__item:hover, .menu__print_button:hover {
+.menu__item:hover{
   background-color: #e8a9a9;
   cursor: pointer;
 
 
 }
+#menu__label {
+  cursor: pointer;
+  font-size:28px;
+  padding-left: 28px;
+  color: #3a5683;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+#menu__label.darkMode-on {
+  color: #8fb9fc;
+  background-color: #031729;
+}
 
-#toggle{ /*removes checkbox near MENU label*/
+
+#menu__toggle{ /*removes checkbox near MENU label*/
      display: none;
-/*
-   */
-
 
 }
 
 @media screen and (max-width: 570px) {
   
-    label{ /*styles MENU symbol*/
+    #menu__label{ /*styles MENU symbol*/
         display: block;
-        cursor: pointer;
-        font-size:28px;
-        color: black;
-/*        float:left;*/
-/*        margin-right: 20px;*/
+        
 
     }
     
-    #toggle:checked + .menu{ /*MENY symbol appears*/
+    #menu__toggle:checked + .menu{ /*MENY symbol appears*/
         display: block;
       
     }

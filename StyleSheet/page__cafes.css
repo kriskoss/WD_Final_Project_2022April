@@ -1,0 +1,115 @@
+/*PAGE - CAFE ####################*/
+
+:root {
+  --cafe__image_box_height: 200px;
+}
+.cafe {
+  display: block; 
+  overflow: auto;
+/*  min-height: calc(var(--cafe__image_box_height) + 0px);*/
+  
+  margin: 2vw;
+  background-color: hsl(44, 51%, 84%);
+  box-shadow: -3px 3px 8px hsl(44, 12%, 63%);
+  border-radius: 15px;
+  
+  }
+.cafe.darkMode-on {
+  background-color: hsla(44, 25%, 53%, 0.13);
+  box-shadow:none;
+}
+
+
+.cafe__image_box {
+  border-radius: 15px;
+  position: relative; /*necesary for cafe__logo positioning*/
+  float: right;
+  max-width: var(--cafe__image_box_height);
+  height: auto;
+  margin-left: 1vw;
+}
+
+
+@media screen and (max-width: 570px){
+  .cafe__image_box {
+    float: none;
+    margin: auto; //*centers image in the container*/
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 571px) and (max-width: 1010px){
+  body.large .cafe__image_box {
+    float: none;
+    
+    max-width: 200px;
+    height: auto;
+    margin: auto; //*centers image in the container*/
+    border: 3px solid red;
+  }
+}
+
+.cafe__img {
+  margin: auto;
+  border-radius: 15px;
+  width: 100%;
+  z-index: 1; /*postions an image under the logo*/  
+  
+}
+
+.cafe__logo {
+  border-radius: 15px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  
+  width:calc(var(--cafe__image_box_height) * 0.4);
+  height: auto;
+  z-index: 2;
+  
+}
+
+.cafe__name {
+  text-align: left;
+  padding: 0.5vw;
+}
+
+.cafe__description {
+  padding: 0.5vw; 
+}
+
+
+/*cafeShort list #########################*/
+.cafeShort{
+  padding: 5px;
+  color: gray;
+}
+
+.cafeShort__title{
+  margin: 5px;
+  
+    
+}
+.cafeShort__list {
+  list-style-type: none;
+  padding-left: 0;
+  
+}
+
+.cafeShort__item{
+    padding: 5px
+}
+
+.cafeShort__logo{
+  width: 30px;
+  height: auto;
+  vertical-align: middle
+}
+
+.cafeShort__name, .cafeShort__link {
+  color: gray;
+  font-size: 0.9em;
+  
+  
+}

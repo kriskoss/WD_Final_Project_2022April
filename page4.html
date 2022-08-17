@@ -32,7 +32,16 @@
 
 <body>
   <header class="gridArea" w3-include-html="external_header.html"></header> 
-  <nav class="grid-area" w3-include-html="external_nav.html"></nav>
+  <nav id="nav__target" class="navBar" >
+        <script id="template" type="template/handlebars">{{>nav__partial}}</script>
+        <script> 
+          insert_external_elements(
+            "nav__target", 
+            "nav__partial", 
+            "external_nav.html"
+          );
+        </script>
+      </nav>
   <footer class="gridArea"><h2>FOOTER</h2></footer>
   
 <!--  SCRIPTS-->
