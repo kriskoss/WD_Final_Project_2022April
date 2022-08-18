@@ -1,7 +1,73 @@
 /*index.html CSS------------------------------------*/
+/*LAYOUT specific for this page*/
+.panorama_top {grid-area: pano_top;}
+
+@media screen and (max-width: 570px) {
+  #grid-container-index {
+    grid-template-columns: auto;
+    grid-template-areas:
+    'header'
+    'accesibility'
+    'nav'
+    'breadcrumbs'
+    'pano_top'
+    'main'
+    'sidePanel'
+    'footer';
+  }
+  
+  .articleAtThisPage {
+    display: none;
+  }
+}
+
+
+
+@media screen and (min-width: 571px) and (max-width: 1010px){
+  #grid-container-index {
+    grid-template-columns: 25% auto;
+    grid-template-areas:
+    'header header header '
+    
+    'breadcrumbs breadcrumbs accesibility'  
+    'nav nav nav'
+    'pano_top pano_top pano_top'
+    'sidePanel main main'
+    'footer footer footer';
+  }
+}
+@media screen and (min-width:1010px){
+  #grid-container-index {
+    grid-template-columns: auto 60% auto;
+    grid-template-areas:
+    'header header header'
+    'breadcrumbs breadcrumbs accesibility'
+    'nav pano_top sidePanel'  
+    'nav main sidePanel'
+    'footer footer footer';
+  }
+
+
+
+}
+
+
+
+
+
 /*#### MAIN ####*/
 
+
+
 /*INTRO section*/
+.panorama_top {
+  
+}
+
+.panorama_top__img {
+  width: 100%;
+}
+
 .intro{
   
 }
