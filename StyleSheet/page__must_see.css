@@ -32,7 +32,7 @@
   height: auto;
   margin: auto; /*necessary to center an image*/
   
-  border-radius: 10px;
+  border-radius: 15px;
   
  }
 
@@ -59,6 +59,8 @@
 
 .must_see_short__heading{
   margin: 0.05vw;
+  color: black;
+  font-size: 0.8em;
 }
 
 .must_see_short__list{
@@ -67,14 +69,25 @@
 
 }
 .must_see_short__item {
-  padding: 0.05vw;
+  padding: 0.01vw;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  
 }
+
+.must_see_short__item:hover {
+  padding: 0.01vw;
+  background-color: bisque;
+  border-radius: 10px;
+  
+}
+
 
 .must_see_short__img{
   vertical-align: middle;
   height: 40px;
   width: auto;
-  border-radius: 20px;
+  border-radius: 10px;
   
 }
 
@@ -83,6 +96,7 @@
   color: gray;
   font-size: 0.9em;
   text-decoration: none;
+  padding: 0px;
 }
 .must_see_short__name {
   

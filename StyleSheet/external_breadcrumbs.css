@@ -1,11 +1,12 @@
 /*BREADCRUMBS styles*/
 .breadcrumbs {
-  
+         
 }
 
 .breadcrumbs__text{
-color: gray;
-
+  color: gray;
+  font-size: 0.8em;
+  padding-left: 20px;
 }
 
 .bradcrumbs__link{
@@ -14,5 +15,22 @@ color: gray;
 }
 
 .breadcrumbs__at{
-  
+  color: #535252;
+}
+
+@media screen and (max-width: 570px){
+  .breadcrumbs {
+    margin: auto;
+    margin-top: 4px;
+    margin-bottom:4px;
+
+
+}
+
+  .breadcrumbs__text{
+    color: lightgrey;
+    font-size: 0.8em;
+    
+  }
+
 }
