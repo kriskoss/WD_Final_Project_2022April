@@ -113,6 +113,7 @@ font-size: calc(var(--fontSize__selector_size) * 1.6);
 
 .print_button {
   font-size: calc(var(--fontSize__selector_size) * 1.2);
+  padding-top:2px; 
   
   
 }
