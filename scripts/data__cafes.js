@@ -7,13 +7,13 @@ export const data = {
   title: "Best cafes",
   cafes: [
     {name:"Nero Cafe - Nowy Świat",
-     img_path:"Resources/Images/homepage/alley.jpg",
+     img_path:"Resources/Images/cafes/alley.jpg",
      logo_path: path__nero,
      description:"Always busy cafe in the main turistic street of Warsaw, the Nowy Świat Street",
     },
 
     {name:"Starbucks - City Center",
-     img_path:"Resources/Images/homepage/iluzjon.jpg",
+     img_path:"Resources/Images/cafes/iluzjon.jpg",
      logo_path: path__starbucks,
      description:"Large Starbucks with a view to the main landmark of Warsaw - the Pałac Kultury i Nauki",},
 

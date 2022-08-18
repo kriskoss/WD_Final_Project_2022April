@@ -15,7 +15,8 @@
     <meta name="refresh" content="600">    
     
     <!-- styles-->
-    <link rel="stylesheet" type="text/css" href="StyleSheet/common_style.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/page__home_page.css">
       
     <!-- scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
@@ -78,25 +79,74 @@
         
       <main class="gridArea">
       
-        <section id ="fpIntro">
-          <h2>Website introducion</h2>
-          <ul class="fpIntro_list">
-            <li >This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
-            <li>Experience the best what Warsaw city has to offer for a relaxing day in the city.</li>
-            <li>Anyone can contribute, just add your post in selected section. We all vote for best ones.</li>
-            <li>Each section is made by you for you. </li>
+        <section clas ="intro">
+          <h2 class="intro__heading">Welcome at Warsaw City Funclub website!</h2>
+          <ul class="intro__list">
+            <li class="intro__item">This is the website for people who love to spend days in the Warsaw, stay in caffees, to explore the city on a bicycle or at foot, with or without kids.</li>
+            
+            <li class="intro__item">
+              Experience the best what Warsaw city has to offer for a relaxing day in the city.
+            </li>
+            
+            <li class="intro__item">
+              Have a look at our selecte coffee houses where you can have a break while visiting the city in 
+              
+              <a class="intro__link" href="page_cafes.html" >Cafes</a>
+              section.
+            </li>
+            
+            <li class="intro__item">
+              Check out most interesting places in Warsaw while you are on short 1-day visit for the first time in 
+              
+              <a class="intro__link" href="page_must_see.html" >Must See</a> 
+              
+              section. 
+            </li>
+            
+            <li class="intro__item">
+              Or just have a look at photos of the city, if you just wonder what Warsaw has to offer. Visit 
+              
+              <a class="intro__link" href="page_photo_gallery.html" >Photos</a> 
+              
+              section.
+            </li>
+            
+            <li class="intro__item">
+              There is also the link to the 
+             
+              <a class="intro__link" href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>Warsaw City Metro</a> 
+              
+              website to help you find your way here.
+            </li>
+            
+            <li class="intro__item">
+              You can finde also our recomended smartphone 
+              <a class="intro__link" href="#apps__ref">
+                <span class="intro__symbol">&#128279</span> apps 
+              </a>
+              which are essential to have most out of each visit.
+            </li>
+            
+            <li class="intro__item"> In case you need any help please contact us in the 
+              <a class="intro__link" href="#footer__target">
+                <span class="intro__symbol">&#128279</span>footer
+              </a>
+              section below.</li>
           </ul>
+          <h3 class="photos__heading">We hope you will enjoy your time in our favorite city! </h3>
+
+          <div class="photos">
+            
+            <img class="photos__img" src="Resources/Images/homepage/panorama.jpg">
+
+  <!--          <img class="photos__img" src="Resources/Images/homepage/iluzjon.jpg">--><!--          <img class="photos__img" src="Resources/Images/homepage/costa.jpg">-->
+  <!--          <img class="photos__img" src="Resources/Images/homepage/playground.jpg">-->
+  <!--          <img class="photos__img" src="Resources/Images/homepage/sunset.jpg">-->
+  <!--          <img class="photos__img" src="Resources/Images/homepage/vespa.jpg">-->
+        </div>
         </section>
        
-        <section class="photos">
-          <h3>There are many interesting places to visit and enjoyful things to see here:</h3>
-          <img class="photos__img" src="Resources/Images/homepage/iluzjon.jpg">
-          <img class="photos__img" src="Resources/Images/homepage/scyscreapers.jpg">
-          <img class="photos__img" src="Resources/Images/homepage/costa.jpg">
-          <img class="photos__img" src="Resources/Images/homepage/playground.jpg">
-          <img class="photos__img" src="Resources/Images/homepage/sunset.jpg">
-          <img class="photos__img" src="Resources/Images/homepage/vespa.jpg">
-        </section>
+        
       
       </main>
       
@@ -105,8 +155,7 @@
           <h2>At this page:</h2>
           <ul>
             <li>Introduction</li>
-            <li>Photos of Warsaw</li>
-            
+                        
           </ul>
         </section>
               
@@ -114,7 +163,7 @@
           <label for="underground__toggle" id="underground__label">&#x25BE Underground Map</label>
           <input type="checkbox" id="underground__toggle">
           
-          <div class="underground__area">
+          <div class="underground__hiddenArea">
             <h2 class="underground__heading">Underground Map:</h2>
             <a class="underground__link"href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>
               <img class="underground__img" src="Resources/VectorImages/metroMap.png" alt="Warsaw metro diagram">
@@ -125,7 +174,7 @@
         <section class="apps gridArea">
           <label for="apps__toggle" id="apps__label">&#x25BE Apps</label>
           <input type="checkbox" id="apps__toggle">
-          <div class="apps__hidingArea">
+          <div class="apps__hiddenArea">
             <h3 class="apps__heading">Apps:</h3>
             <div class="app">
               <a class="app_link" href="https://jakdojade.pl/warszawa/trasa/">
@@ -135,7 +184,7 @@
             </div>
 
 
-            <div class="app">
+            <div class="app" id="apps__ref">
               <a class="app_link" href="https://veturilo.waw.pl/en/">
                 <img class="app__img" src="Resources/Icons/VeturiloLogo.svg" alt="Veturilo - Public Bikes logo">Veturilo
               </a>

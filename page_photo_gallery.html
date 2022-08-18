@@ -16,7 +16,8 @@
     <meta name="refresh" content="600">    
     
     <!-- styles-->
-    <link rel="stylesheet" type="text/css" href="StyleSheet/common_style.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet/page__gallery.css">
       
     <!-- scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"></script>
@@ -72,57 +73,21 @@
 
       <aside class="breadcrumbs">
         <span class="breadcrumbs__text">
-          <a class="bradcrumbs__link" href="index.html" >Home Page</a>
+          <a class="bradcrumbs__link" href="home_page.html" >Home Page</a>
             &#x232A
           <strong class="breadcrumbs__at">Warsaw Photo Gallery</strong>
         </span>  
       </aside>
-      
-      <aside class="sidePanel">
-        <section class="articleAtThisPage gridArea">
-          <h2>At this page:</h2>
-          <ul>
-            <li>Introduction</li>
-            <li>Photos of Warsaw</li>
             
-          </ul>
-        </section>
-              
-        <section class="underground gridArea">
-          <label for="underground__toggle" id="underground__label">&#x25BE Underground Map</label>
-          <input type="checkbox" id="underground__toggle">
-          
-          <div class="underground__area">
-            <h2 class="underground__heading">Underground Map:</h2>
-            <a class="underground__link"href='https://metro.waw.pl/metro-warszawskie/linia-m1/przebieg/'>
-              <img class="underground__img" src="Resources/VectorImages/metroMap.png" alt="Warsaw metro diagram">
-            </a>
-          </div>
-        </section>
-    
-        <section class="apps gridArea">
-          <label for="apps__toggle" id="apps__label">&#x25BE Apps</label>
-          <input type="checkbox" id="apps__toggle">
-          <div class="apps__hidingArea">
-            <h3 class="apps__heading">Apps:</h3>
-            <div class="app">
-              <a class="app_link" href="https://jakdojade.pl/warszawa/trasa/">
-                <img class="app__img" src="Resources/Icons/jakdojadeIcon.webp" alt='JakDojade Application logo'>JakDojade
-              </a>
-              <p class="app__description">- the best app for public transport in Warsaw</p>
-            </div>
-
-
-            <div class="app">
-              <a class="app_link" href="https://veturilo.waw.pl/en/">
-                <img class="app__img" src="Resources/Icons/VeturiloLogo.svg" alt="Veturilo - Public Bikes logo">Veturilo
-              </a>
-              <p class="app__description">- Warsaw public bicycles</p>
-            </div>
-          </div>
-        </section>
-      
-      </aside>  
+      <main>
+        <div id="photos__target" class="photos row">
+          <script id="photos__template" type="template/handlebars">
+            {{{list photos}}}
+          </script> 
+        
+        <script type="module" src="scripts/template__photos.js"></script>
+      </div>
+      </main>
       
     <footer id="footer__target" class="footer gridArea">
         <script id="template" type="template/handlebars">{{>footer__partial}}</script>
@@ -136,7 +101,10 @@
       </footer>
     
   </div>  
-  
+  <!--COMMON scripts  -->
+  <script src="scripts/progress_bar.js"></script>
+  <script src="scripts/accessibility__darkMode.js" defer></script>
+  <script src="scripts/accessibility__change_font_size.js" defer></script>
 </body>
 
 

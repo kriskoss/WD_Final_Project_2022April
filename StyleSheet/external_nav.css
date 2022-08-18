@@ -4,6 +4,7 @@
   
 .navBar { 
 margin: 1vw;
+  
 }
 
 @media print {
@@ -40,10 +41,10 @@ margin: 1vw;
   
   font-weight: bold;
   
-  background-color: #717398;
+  background-color: #888888;
   color: white;
-  box-shadow: 2px 2px 10px #89a2d9;
-  border-radius: 5px;
+  box-shadow: 1px 1px 2px #bababa;
+  border-radius: 3px;
   
   
   
@@ -57,7 +58,7 @@ margin: 1vw;
 @media screen and (min-width: 571px) and (max-width: 1010px){
   .menu__item {
     display: inline;
-    margin: 1vw;
+    margin: auto;
   }
 }
 
@@ -77,10 +78,10 @@ margin: 1vw;
 }
 #menu__label {
   cursor: pointer;
-  font-size:28px;
-  padding-left: 28px;
-  color: #3a5683;
-  background-color: aliceblue;
+  font-size:1.4em;
+  padding-left: 3px;
+  color: #f7f7f7;
+  background-color: #bababa;
   border-radius: 5px;
 }
 #menu__label.darkMode-on {
