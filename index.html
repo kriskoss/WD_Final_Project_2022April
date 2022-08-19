@@ -36,7 +36,7 @@
       </div>
       
      
-      <header id="header__target" class="gridArea">
+      <header id="header__target" class="closed_area">
         <script id="template" type="template/handlebars">{{>header__partial}}</script>
       
         <script> 
@@ -79,7 +79,7 @@
       <section class="panorama_top">
         <img class="panorama_top__img" src="Resources/Images/homepage/panorama_top.jpg">
       </section>  
-      <main class="gridArea">
+      <main class="">
       
         <section clas ="intro">
           <h2 class="intro__heading">Welcome at Warsaw City Funclub website!</h2>
@@ -118,16 +118,16 @@
               </a>
               section below.</li>
           </ul>
-          <h3 class="photos__heading">We hope you will enjoy your time in our favorite city! </h3>
+          <h3 class="panorama_bottom__heading">We hope you will enjoy your time in our favorite city! </h3>
 
-          <div class="photos">
+          <div class="panorama_bottom">
             
-            <img class="photos__img" src="Resources/Images/homepage/panorama.jpg">
+            <img class="panorama_bottom__img" src="Resources/Images/homepage/panorama.jpg">
 
-  <!--          <img class="photos__img" src="Resources/Images/homepage/iluzjon.jpg">--><!--          <img class="photos__img" src="Resources/Images/homepage/costa.jpg">-->
-  <!--          <img class="photos__img" src="Resources/Images/homepage/playground.jpg">-->
-  <!--          <img class="photos__img" src="Resources/Images/homepage/sunset.jpg">-->
-  <!--          <img class="photos__img" src="Resources/Images/homepage/vespa.jpg">-->
+  <!--          <img class="panorama_bottom__img" src="Resources/Images/homepage/iluzjon.jpg">--><!--          <img class="panorama_bottom__img" src="Resources/Images/homepage/costa.jpg">-->
+  <!--          <img class="panorama_bottom__img" src="Resources/Images/homepage/playground.jpg">-->
+  <!--          <img class="panorama_bottom__img" src="Resources/Images/homepage/sunset.jpg">-->
+  <!--          <img class="panorama_bottom__img" src="Resources/Images/homepage/vespa.jpg">-->
         </div>
         </section>
        
@@ -136,23 +136,23 @@
       </main>
       
       <aside class="sidePanel">
-        <section class="articleAtThisPage gridArea">
-          <h2>At this page:</h2>
-          <ul>
-            <li>Introduction</li>
+        <section class="at_this_page closed_area">
+          <h2 class="at_this_page__heading">At this page:</h2>
+          <ul class="at_this_page__list">
+            <li class="at_this_page__item">Introduction</li>
             
-            <li>
+            <li class="at_this_page__item">
               <a class="intro__link" href="#apps__ref">
                  Recommended apps<span class="intro__symbol">&#128279</span></a>
-            </li>
-            <li>
+            </li >
+            <li class="at_this_page__item">
               <a class="intro__link" href="#underground__ref"> Underground Map<span class="intro__symbol">&#128279</span></a>
             </li>
                         
           </ul>
         </section>
               
-        <section class="underground gridArea"  id="underground__ref">
+        <section class="underground closed_area"  id="underground__ref">
           <label for="underground__toggle" id="underground__label">&#x25BE Underground Map</label>
           <input type="checkbox" id="underground__toggle">
           
@@ -164,7 +164,7 @@
           </div>
         </section>
     
-        <section class="apps gridArea" id="apps__ref">
+        <section class="apps closed_area" id="apps__ref">
           <label for="apps__toggle" id="apps__label">&#x25BE Apps</label>
           <input type="checkbox" id="apps__toggle">
           <div class="apps__hiddenArea">
@@ -188,7 +188,7 @@
       
       </aside>  
     
-      <footer id="footer__target" class="footer gridArea">
+      <footer id="footer__target" class="footer closed_area">
         <script id="template" type="template/handlebars">{{>footer__partial}}</script>
         <script>
           insert_external_elements(

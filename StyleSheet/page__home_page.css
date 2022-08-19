@@ -1,55 +1,4 @@
 /*index.html CSS------------------------------------*/
-/*LAYOUT specific for this page*/
-.panorama_top {grid-area: pano_top;}
-
-@media screen and (max-width: 570px) {
-  #grid-container-index {
-    grid-template-columns: auto;
-    grid-template-areas:
-    'header'
-    'accesibility'
-    'nav'
-    'breadcrumbs'
-    'pano_top'
-    'main'
-    'sidePanel'
-    'footer';
-  }
-  
-  .articleAtThisPage {
-    display: none;
-  }
-}
-
-
-
-@media screen and (min-width: 571px) and (max-width: 1010px){
-  #grid-container-index {
-    grid-template-columns: 25% auto;
-    grid-template-areas:
-    'header header header '
-    
-    'breadcrumbs breadcrumbs accesibility'  
-    'nav nav nav'
-    'pano_top pano_top pano_top'
-    'sidePanel main main'
-    'footer footer footer';
-  }
-}
-@media screen and (min-width:1010px){
-  #grid-container-index {
-    grid-template-columns: auto 60% auto;
-    grid-template-areas:
-    'header header header'
-    'breadcrumbs breadcrumbs accesibility'
-    'nav pano_top sidePanel'  
-    'nav main sidePanel'
-    'footer footer footer';
-  }
-
-
-
-}
 
 
 
@@ -57,16 +6,8 @@
 
 /*#### MAIN ####*/
 
-
-
 /*INTRO section*/
-.panorama_top {
-  
-}
 
-.panorama_top__img {
-  width: 100%;
-}
 
 .intro{
   
@@ -89,28 +30,39 @@
   border-radius: 10px;
   
 }
+.intro__item.darkMode-on{
+  background-color: #212121;
+  box-shadow: none;
+    
+}
 
 .intro__link{
   color: #0000a2;
-  
 }
+
+.intro__link.darkMode-on{
+  color: beige;
+}
+
 .intro__symbol{
   font-size: 0.7em;
   color: grey;
   text-decoration: none;
 }
 
-
-
-.photos {
+.at_this_page__item{
+  word-break: break-word;
+}
+/**/
+.panorama_bottom {
   
 }
 
-.photos__heading {
+.panorama_bottom__heading {
   position: relative;
   display: block;
 }
-.photos__img {
+.panorama_bottom__img {
   width: 100%;
 /*  max-width: 800px;*/
   height: auto;
@@ -170,6 +122,8 @@
 
 .underground__heading{
   text-align: center;
+  word-break: break-word;
+  
 }
 
 .underground__link {
@@ -268,7 +222,7 @@
   .underground__img {
     width: 400px;
   }
-  .photos__img, .articleAtThisPage {
+  .photos__img, .at_this_page {
     display: none;
   }
   #grid-container-index {
@@ -278,8 +232,10 @@
     grid-template-areas:
     'header'
     'breadcrumbs'
+    'pano_top'
     'main'
     'sidePanel'
     'footer';
   }
 }
+

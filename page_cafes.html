@@ -39,7 +39,7 @@
     <div id=grid-container-index>
       <div class="progress_bar"></div>
            
-      <header id="header__target" class="gridArea">
+      <header id="header__target" class="closed_area">
         <script id="template" type="template/handlebars">{{>header__partial}}</script>
       
         <script> 
@@ -81,14 +81,18 @@
           <strong class="breadcrumbs__at">Cafes</strong>
         </span>  
       </aside>
-        
-      <main class="gridArea">
       
-        <section id="cafes_main_target" class="cafe_main gridArea">
+      <section class="panorama_top">
+        <img class="panorama_top__img" src="Resources/Images/cafes/cafe_top.jpg">
+        <h2 class="panorama_top__heading"> Best cafes</h2>
+      </section>  
+      
+      <main class="">
+      
+        <section id="cafes_main_target" class="cafes_main">
           <script id="cafes_main_template" type="template/handlebars">
-            <h1>{{title}}</h1>
               {{#cafes}}
-                <div class="cafe_main__item" id="{{name}}">
+                <div class="cafes_main__item" id="{{name}}">
                   <div class="cafes_main__image_box">
                     <img class="cafes_main__img" src="{{img_path}}">
                     <img class="cafes_main__logo" src="{{logo_path}}">
@@ -106,7 +110,7 @@
       </main>
       
       <aside class="sidePanel">
-        <section id="cafes_short__target" class="cafes_short gridArea"> 
+        <section id="cafes_short__target" class="cafes_short closed_area"> 
           <script id="cafes_short__template" type="template/handlebars">
             <h4 class="cafes_short__title">At this page:</h4>
             <ol class="cafes_short__list">
@@ -132,7 +136,7 @@
       </aside>  
       
 
-      <footer id="footer__target" class="footer gridArea">
+      <footer id="footer__target" class="footer closed_area">
         <script id="template" type="template/handlebars">{{>footer__partial}}</script>
         <script>
           insert_external_elements(

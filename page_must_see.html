@@ -33,7 +33,7 @@
   <div id=grid-container-index>
     <div class="progress_bar"></div>
       <!--EXTERNAL CODE    -->
-    <header id="header__target" class="gridArea">
+    <header id="header__target" class="closed_area">
           <script id="template" type="template/handlebars">{{>header__partial}}</script>
           <script> 
             insert_external_elements(
@@ -74,11 +74,15 @@
           <strong class="breadcrumbs__at">Must See 1-day</strong>
         </span>  
       </aside>
-            
+    
+    <section class="panorama_top">
+      <img class="panorama_top__img" src="Resources/Images/must_see/must_see__top.jpg">
+      <h2 class="panorama_top__heading">Must See 1-day</h2>
+    </section>        
+    
     <main>
-      <section id="must_see_main__target" class="gridArea">
+      <section id="must_see_main__target" class="">
           <script id="must_see_main__template" type="template/handlebars">
-            <h1>{{title}}</h1>
               {{#places}}
                 <div class="must_see_main__item" id="{{name}}">
                   <h4 class="must_see_main__name">{{name}}</h4>
@@ -99,7 +103,7 @@
     
     
       <aside class="sidePanel">
-        <section id="must_see_short__target" class="must_see_short gridArea">
+        <section id="must_see_short__target" class="must_see_short closed_area">
           <script id="must_see_short__template" type="template/handlebars">
             <h3 class="must_see_short__heading">At this page:</h1>
               {{#places}}
@@ -127,7 +131,7 @@
       </aside>  
     
     
-    <footer id="footer__target" class="footer gridArea">
+    <footer id="footer__target" class="footer closed_area">
         <script id="template" type="template/handlebars">{{>footer__partial}}</script>
         <script>
           insert_external_elements(

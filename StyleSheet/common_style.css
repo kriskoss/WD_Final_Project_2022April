@@ -41,8 +41,10 @@ button.darkMode-on {
 * {
   
 }
-*.darkMode-on{
+.darkMode-on{
   color: beige;
+  box-shadow: none;
+/*  background:none;*/
 }
 body{
     
@@ -96,34 +98,62 @@ h2.darkMode-on {
 
 
 
-.gridArea {
+/*TOP PANORAMA style*/
+.panorama_top {
+  margin: auto;
+  position: relative;  /* must be relatice for absolute value below work fine*/
+}
+
+.panorama_top__img {
+/*  position: relative*/
+  
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  margin: auto;
+  
+  
+    
+    
+}
+
+.panorama_top__heading{
+ position: absolute;
+  color: #ffffff;
+  font-size: 2.5em;
+  text-shadow: 0 0 1.5vw #ffffff;
+  margin: 0;
+  bottom: 2vw;
+  left:2vw;
+   
+}
+
+/*generic CLOSED_AREA to contain some content*/
+.closed_area {
   background-color: hsl(0,5%,95%);
   border-radius: 10px;
   margin: 0.5vw;
   padding: 0.5vw;
     
 }
-.gridArea.darkMode-on{
+.closed_area.darkMode-on{
   background-color: hsl(0,5%,10%);
-}
-.float-right {
-  float:right;
 }
 
 /*GRID AREAS--------------------------------------------------*/
+/*Layout*/
+#grid-container-index {
+  display: grid;
+  
+}
+
 header { grid-area: header; }
 .accessibility {grid-area: accesibility;}
 main {grid-area: main;}
 .breadcrumbs {grid-area: breadcrumbs;}
 .sidePanel {grid-area: sidePanel;}
 footer{grid-area: footer}
-
-
-/*Layout*/
-#grid-container-index {
-  display: grid;
-  
-}
+.panorama_top {grid-area: pano_top;}
 
 @media screen and (max-width: 570px) {
   #grid-container-index {
@@ -133,19 +163,27 @@ footer{grid-area: footer}
     'accesibility'
     'nav'
     'breadcrumbs'
-    'sidePanel'
+    'pano_top'
     'main'
+    'sidePanel'
     'footer';
   }
   
+  .at_this_page {
+    display: none;
+  }
 }
+
+
 @media screen and (min-width: 571px) and (max-width: 1010px){
   #grid-container-index {
     grid-template-columns: 25% auto;
     grid-template-areas:
     'header header header '
+    
     'breadcrumbs breadcrumbs accesibility'  
     'nav nav nav'
+    'pano_top pano_top pano_top'
     'sidePanel main main'
     'footer footer footer';
   }
@@ -156,6 +194,7 @@ footer{grid-area: footer}
     grid-template-areas:
     'header header header'
     'breadcrumbs breadcrumbs accesibility'
+    'nav pano_top sidePanel'  
     'nav main sidePanel'
     'footer footer footer';
   }
@@ -183,7 +222,6 @@ footer{grid-area: footer}
     'sidePanel'
     'footer';
   }
-  
 }
 
 

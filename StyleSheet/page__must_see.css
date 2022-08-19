@@ -1,4 +1,10 @@
 /*PAGE - MUST_SEE##################################*/
+/*Common style modified*/
+.must_see_short.closed_area {
+  background: none;
+  border-radius: 5px;
+}
+
 :root {
   --must_see_main_max_width: 800px;
 }
@@ -14,10 +20,17 @@
 }
 
 .must_see_main.darkMode-on {
-  background-color: hsla(18, 21%, 90%, 0.13);
+  background-color: hsla(18, 76%, 28%, 0.13);
   box-shadow:none;
 }
-
+.must_see_main__item {
+  background-color: hsla(18, 20%, 94%, 0.45);
+  margin-bottom: 5px;
+  border-radius: 2vw;
+}
+.must_see_main__item.darkMode-on {
+  background-color: #171717
+} 
 
 .must_see_main__name{
   padding: 1vw;
@@ -53,9 +66,14 @@
 
 /*MUST_SEE_SHORT #####################*/
 .must_see_short{
-  padding: 5px;
-  color: gray;
+  background: none;
 }
+
+.must_see_short.darkMode-on{
+  background: none;
+  box-shadow: none;
+}
+
 
 .must_see_short__heading{
   margin: 0.05vw;
@@ -70,8 +88,10 @@
 }
 .must_see_short__item {
   padding: 0.01vw;
-  background-color: #e0e0e0;
-  border-radius: 10px;
+  background-color: none;
+  box-shadow: 2px 2px 5px #d4d4d4;
+  border-radius: 5px;
+  margin: 10px;
   
 }
 
@@ -106,44 +126,16 @@
   
 }
 
-.must_see_short__link.darkMode-on:hover {
+.must_see_short__item.darkMode-on:hover {
   border: 1px solid gray;
-  background-color: #151515;
+  background-color: #535353;
   border-radius: 3px;
-}
-.must_see_short__link:hover {
-  background-color: bisque
-  
 }
 .must_see_short__symbol{
   font-size: 0.7em;
   color: gray;
 }
 
-/*cafes_short_ list #########################*/
-
-
-.cafes_short__item{
-    padding: 5px
-}
-
-.cafes_short__logo{
-  width: 30px;
-  height: auto;
-  vertical-align: middle
-}
-
-.cafes_short__name, .cafes_short__link {
-  color: gray;
-  font-size: 0.9em;
-  text-decoration: none;
-  
-}
-
-.cafes_short__symbol {
-  font-size: 0.7em;
-  color: gray;
-}
 
 /*PRINTING display#################*/
 @media print  {
@@ -166,4 +158,8 @@
     'main'
     'footer';
   }
+}
+/*Makes all text in one color in dark mode - unless overriden*/
+.darkMode-on {
+  color: bisque;
 }

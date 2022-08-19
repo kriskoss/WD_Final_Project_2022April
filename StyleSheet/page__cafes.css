@@ -1,38 +1,46 @@
 /*PAGE - CAFE ####################*/
+/*Common style modified*/
+.cafes_short.closed_area {
+  background: none;
+  border-radius: 5px;
+}
 
+
+/*Only for this page*/
 :root {
   --cafes_main__image_box_height: 200px;
 }
-.cafe_main {
+.cafes_main {
   
 }
-.cafe_main__item {
+.cafes_main__item {
   display: block; 
   overflow: auto;
 /*  min-height: calc(var(--cafes_main__image_box_height) + 0px);*/
   
   margin: 2vw;
-  background-color: hsl(44, 51%, 84%);
-  box-shadow: -3px 3px 8px hsl(44, 12%, 63%);
-  border-radius: 15px;
+  background-color: hsl(44, 54%, 92%);
+  box-shadow: -3px 3px 8px hsl(0, 0%, 78%);
+  border-radius: 10px;
   
   }
 
 @media screen and (max-width: 570px){
-  .cafe_main__item{
+  .cafes_main__item{
     margin-left: 0px;
     margin-right: 0px;
     border-radius: 2vw; 
   } 
 }
-.cafe_main__item.darkMode-on {
+
+.cafes_main__item.darkMode-on {
   background-color: hsla(44, 25%, 53%, 0.13);
   box-shadow:none;
 }
 
 
 .cafes_main__image_box {
-  border-radius: 15px;
+  border-radius: 10px;
   position: relative; /*necesary for cafes_main__logo positioning*/
   float: right;
   max-width: var(--cafes_main__image_box_height);
@@ -63,7 +71,7 @@
 
 .cafes_main__img {
   margin: auto;
-  border-radius: 15px;
+  border-radius: 10px;
   width: 100%;
   z-index: 1; /*postions an image under the logo*/  
   
@@ -77,7 +85,7 @@
 
 
 .cafes_main__logo {
-  border-radius: 15px;
+  border-radius: 10px;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -111,6 +119,13 @@
   color: gray;
 }
 
+/*
+.cafes_short.darkMode-on, {
+  color: beige;
+  
+}
+*/
+
 .cafes_short__title{
   margin: 5px;
   
@@ -124,24 +139,43 @@
 
 .cafes_short__item {
   padding: 0.01vw;
-  background-color: #e0e0e0;
-  border-radius: 6px;
+  background-color: none;
+  box-shadow: 2px 2px 5px #d4d4d4;
+  border-radius: 5px;
   margin: 10px;
   
 }
 
-.cafes_short__item:hover {
+.cafes_short__item {
   padding: 0.01vw;
-  background-color: bisque;
-  border-radius: 10px;
+  background-color: none;
+  box-shadow: 2px 2px 5px #d4d4d4;
+  border-radius: 5px;
+  margin: 10px;
   
 }
+
+
+.cafes_short__item:hover {
+  padding: 0.01vw;
+/*  background-color: bisque;*/
+  border-radius: 5px;
+  
+}
+
+.cafes_short__item:hover.darkMode-on {
+  
+  background-color: #626262;
+  
+  
+}
+
 
 .cafes_short__logo{
   width: 30px;
   height: auto;
   vertical-align: middle;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 .cafes_short__name, .cafes_short__link {
@@ -151,16 +185,12 @@
   
 }
 
-.cafes_short__link:hover {
-  background-color: bisque;
+/*
+.cafes_short__link.darkMode-on {
+  color: beige;
+  
 }
-
-.cafes_short__link.darkMode-on:hover {
-  border: 1px solid gray;
-  background-color: #151515;
-  border-radius: 3px;
-}
-
+*/
 
 .cafes_short__symbol {
   
@@ -186,5 +216,9 @@
     'main'
     'footer';
   }  
+}
+
+.darkMode-on {
+  color: bisque;
 }
 
