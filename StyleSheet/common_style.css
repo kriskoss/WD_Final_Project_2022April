@@ -158,16 +158,15 @@ footer{grid-area: footer}
 
 @media screen and (max-width: 570px) {
   #grid-container-index {
-    grid-template-columns: auto;
+    grid-template-columns: 50% 50%;
     grid-template-areas:
-    'header'
-    'accesibility'
-    'nav'
-    'breadcrumbs'
-    'pano_top'
-    'main'
-    'sidePanel'
-    'footer';
+    'header header'
+    'nav accesibility'
+    'breadcrumbs breadcrumbs'
+    'pano_top pano_top'
+    'main main'
+    'sidePanel sidePanel'
+    'footer footer';
   }
   
   .at_this_page {

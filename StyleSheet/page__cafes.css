@@ -50,14 +50,15 @@
   --cafes_main__image_box_height: 200px;
 }
 .cafes_main {
-  
+  padding: 0;
 }
 .cafes_main__item {
   display: block; 
   overflow: auto;
 /*  min-height: calc(var(--cafes_main__image_box_height) + 0px);*/
-  
-  margin: 2vw;
+    
+  margin: 10px;
+  margin-top: 32px;
   background-color: hsl(44, 54%, 92%);
   box-shadow: -3px 3px 8px hsl(0, 0%, 78%);
   border-radius: 10px;
@@ -143,6 +144,7 @@
 
 .cafes_main__name {
   text-align: left;
+  font-size: 1.4em;
   padding: 0.5vw;
 }
 
