@@ -206,6 +206,10 @@ footer{grid-area: footer}
     display: none;
     
   }
+  .panorama_top, .panorama_bottom {
+    display: none;
+  }
+  
   div > p {
         break-inside: avoid;
     }

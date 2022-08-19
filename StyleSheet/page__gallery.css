@@ -125,5 +125,6 @@ img.darkMode-on {
   
   .photos img{
     width: 250px;
+    margin: 5px;
   }
 }
