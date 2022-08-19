@@ -6,7 +6,24 @@
 }
 
 
+
 /*Layout modification*/
+@media screen and (min-width: 571px) and (max-width: 1010px){
+  #grid-container-index {
+    grid-template-columns: 40% auto;
+    grid-template-areas:
+    'header header header '
+    
+    'breadcrumbs breadcrumbs accesibility'  
+    'nav nav nav'
+    'pano_top pano_top pano_top'
+    'sidePanel sidePanel sidePanel'
+    'main main main'
+    'footer footer footer';
+  }
+}
+
+
 @media screen and (max-width: 570px) {
   #grid-container-index {
     grid-template-columns: auto;
@@ -74,8 +91,8 @@
 @media screen and (max-width: 570px){
   .cafes_main__image_box {
     float: none;
-    margin: auto; //*centers image in the container*/
     max-width: 100%;
+    margin: auto; //*centers image in the container*/
     height: auto;
   }
 }
@@ -83,8 +100,7 @@
 @media screen and (min-width: 571px) and (max-width: 1010px){
   body.large .cafes_main__image_box {
     float: none;
-    
-    max-width: 200px;
+    max-width: 300px;
     height: auto;
     margin: auto; //*centers image in the container*/
     border: 3px solid red;
@@ -140,22 +156,31 @@
   padding: 5px;
   color: gray;
 }
-
-/*
-.cafes_short.darkMode-on, {
-  color: beige;
-  
+@media screen and (min-width: 571px) and (max-width: 1010px){
+  .cafes_short__flex_area {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cafes_short__item {
+    width: 48%;
+    
+    
+  }
 }
-*/
+
+}
 
 .cafes_short__title{
   margin: 5px;
-  
-    
+      
 }
-.cafes_short__list {
-  list-style-type: none;
-  padding-left: 0;
+
+.cafes_short__item {
+  padding: 0.01vw;
+  background-color: none;
+  box-shadow: 2px 2px 5px #d4d4d4;
+  border-radius: 5px;
+  margin: auto;
   
 }
 
@@ -164,23 +189,14 @@
   background-color: none;
   box-shadow: 2px 2px 5px #d4d4d4;
   border-radius: 5px;
-  margin: 10px;
-  
-}
-
-.cafes_short__item {
-  padding: 0.01vw;
-  background-color: none;
-  box-shadow: 2px 2px 5px #d4d4d4;
-  border-radius: 5px;
-  margin: 10px;
+  margin-top: 10px;
   
 }
 
 
 .cafes_short__item:hover {
   padding: 0.01vw;
-/*  background-color: bisque;*/
+  background-color: bisque;
   border-radius: 5px;
   
 }
@@ -193,17 +209,26 @@
 }
 
 
-.cafes_short__logo{
+.cafes_short__logo, .cafes_short__mini_img{
   width: 30px;
   height: auto;
   vertical-align: middle;
     border-radius: 5px;
 }
 
+.cafes_short__mini_img{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
 .cafes_short__name, .cafes_short__link {
   color: black;
+  
   font-size: 0.9em;
   text-decoration: none;
+  
+    
   
 }
 

@@ -113,22 +113,19 @@
         <section id="cafes_short__target" class="cafes_short closed_area"> 
           <script id="cafes_short__template" type="template/handlebars">
             <h4 class="cafes_short__title">At this page:</h4>
-            <ol class="cafes_short__list">
+            <div class="cafes_short__flex_area">
             {{#cafes}}
-              <li class="cafes_short__item">
+              <div class="cafes_short__item">
+                <img class="cafes_short__mini_img" src="{{img_path}}">
                 <img class="cafes_short__logo" src="{{logo_path}}">
                 <span class="cafes_short__name">
                   <a class="cafes_short__link" href="#{{name}}">
-                    <span class="cafes_short__symbol">
-                      &#x1F517
-                    </span>
-                    {{name}}
+                    {{name}} <span class="cafes_short__symbol">&#x1F517</span>
                   </a>
                 </span>
-              </li>
-
+              </div>
             {{/cafes}}
-            </ol>
+            </div>
           </script>
 
           <script type="module" src="scripts/template__cafes_short.js"></script>
