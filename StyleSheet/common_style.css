@@ -107,7 +107,7 @@ h2.darkMode-on {
 .panorama_top__img {
 /*  position: relative*/
   
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   border-radius: 10px;
   margin: auto;
