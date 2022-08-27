@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 570px) {
   #grid-container-index {
-    grid-template-columns: 50% 50%;
+
     grid-template-areas:
     'header header'
     'nav accesibility'
@@ -37,9 +37,7 @@
     'footer footer';
   }
   
-  .at_this_page {
-    display: none;
-  }
+
 }
 
 
