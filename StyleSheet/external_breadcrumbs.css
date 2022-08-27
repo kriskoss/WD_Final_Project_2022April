@@ -1,6 +1,8 @@
 /*BREADCRUMBS styles*/
 .breadcrumbs {
-         
+  margin-top: auto;
+  margin-bottom: auto;
+  
 }
 
 .breadcrumbs__text{
@@ -29,7 +31,7 @@
 
   .breadcrumbs__text{
     color: lightgrey;
-    font-size: 0.8em;
+    font-size: 0.6em;
     
   }
 

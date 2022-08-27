@@ -23,7 +23,10 @@
   padding: 0px;
 }
 
-  margin: 3px;
+  .footer__item {
+  display: block;
+  }
+
 }
 
 .footer__note {

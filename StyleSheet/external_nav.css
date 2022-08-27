@@ -3,16 +3,17 @@
 .navBar { grid-area: nav; }
   
 .navBar { 
-margin: 1vw;
+  position: relative;
+  margin: 1vw;
+  z-index: 5 ; /*value has to be lower then .accessibility z-index to make all accessiblity items clickable , and in the same time it has to be highter then the all other elements on the website since it is sticky menu*/
   
 }
 
 @media screen and (max-width: 570px) {
   .navBar { 
-    position: -webkit-sticky;
+    position: -webkit-sticky;   
     position: sticky;
     top: 6px;
-    z-index: 4;
     
     
   }
@@ -90,12 +91,13 @@ margin: 1vw;
 }
 #menu__label {
   cursor: pointer;
-  font-size:1.4em;
+  font-size:20px;
   padding-left: 3px;
-  color: #f7f7f7;
-  background-color: #bababa;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
   border-radius: 5px;
-  width: 1.2em;
+  width: 1.4em;
 }
 #menu__label.darkMode-on {
   color: #8fb9fc;

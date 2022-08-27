@@ -7,8 +7,9 @@
 /*#### MAIN ####*/
 
 /*INTRO section*/
-
-
+.bottom_margin {
+  margin-bottom: 50px;
+}
 .intro{
   
 }
@@ -23,13 +24,29 @@
 }
 
 .intro__item{
-  margin-top: 2vw;
   padding: 1vw;
   background-color: #fcfcfc;
-  box-shadow: 2px 2px 10px gray;
-  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(111, 111, 111, 0.48);
+  border-radius: 5px;
   
 }
+
+@media screen and (max-width: 570px){
+  .intro__item{
+    background:none ;
+  box-shadow: none;
+  border-radius: 0px;
+  border-top: 1px solid #bcbbbb;
+  
+  }
+}
+
+.intro__item--highlight{
+  border: 3px solid #fd9797;
+  background-color: #ffeeee;
+  border-radius: 5px;
+}
+
 .intro__item.darkMode-on{
   background-color: #212121;
   box-shadow: none;
@@ -61,6 +78,7 @@
 .panorama_bottom__heading {
   position: relative;
   display: block;
+  border-top: 3px solid gray;
 }
 .panorama_bottom__img {
   width: 100%;

@@ -1,13 +1,20 @@
+:root{
+/*  --fontSize__selector_size: 0.8em*/
+  --fontSize__selector_size: 12px;
+}
+
 .accessibility {
   display:  flex;
   justify-content: flex-end;
-  height: 1.5em;
-  
+  height: calc(var(--fontSize__selector_size) * 2);
+  margin: 1.5vw;
+  z-index: 6; /*value has to be higher then .navbar z-index to make all accessiblity items clickable*/
 }
 
 @media print {
   .accessibility {
   display:  none;
+    
     
 }
 
@@ -30,7 +37,9 @@
 
 .fontSize {
   display: flex;  
-    align-items: baseline;
+  align-items: baseline;
+  position: relative;
+ 
   
   border: 1px solid gray; 
   border-radius: 6px;
@@ -47,9 +56,6 @@
   border-radius: 5px;
 }
 
-:root{
-  --fontSize__selector_size: 0.8em
-}
 .fontSize__selector.small {
 font-size: calc(var(--fontSize__selector_size) * 1.0);  
 }
@@ -75,6 +81,7 @@ font-size: calc(var(--fontSize__selector_size) * 1.6);
 
 .theme__selector {
   cursor: pointer;
+  font-size: var(--fontSize__selector_size);
   text-align: center;
   
   border-radius: 4px;

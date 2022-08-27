@@ -158,7 +158,7 @@ footer{grid-area: footer}
 
 @media screen and (max-width: 570px) {
   #grid-container-index {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     grid-template-areas:
     'header header'
     'nav accesibility'

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang= "en">
+
+<!-- This head section contains all the invisible information about the page -->
+  <head>
+    <title>Final report</title>
+        
+    <!-- ######## COMMON ###########    -->
+    <!-- meta-->
+    <meta charset="utf-8">
+    <meta name="author" content="KK">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="refresh" content="600">    
+    
+    <!-- styles-->
+    <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+    
+
+    
+  </head>
+  <body>
+    Report
+    Your report.html should contain the following (in this order):
+
+    <h2>Your name</h2>
+
+    <h2>Introduction: What is the essential story being told by your site and what type of structure did you choose to implement?</h2>
+    <p>In searching for the topic of my final project website I considered topics which were interesting. I also considered if the website I createed could be useful to me or for someone else. I plan to extend this website even after the submission. My website is called <q>Warsaw City Funclub</q>. The main idea behind it is to gather useful information about interesting places in Polish capital. Very often in my time free of work I think what I could do during the day with my wife, children or alone. I have been living in Warsaw for around 10 years, however despite that it is nice to have somekind of list of places I like. My website contain list or actuall a webpage of major turistic attractions and interesting cafes. Both lists are relatively easy to expand. 
+      
+    </p>
+    <ul>
+        <li><q>Must see</q> page contains turistic atractions or interesitng places in general.</li>
+        
+        <li><q>Cafes</q> page contain list of cafes in the city center area. I spent a lot of time in different cafes as part of my study rutine. Sometimes it is not possible for me to learn at home as chldern age 5 yearrs and 1 month attract my attention too much. A solution is to study somwhere else.</li>
+        
+        <li><q>Gallery</q> contains photos of different parts of the city. In search of interesitn place to visit, seeing a photo can inspire where to go.</li>
+        
+      </ul>
+    
+    <h2>Inspiration: State 3 things that have inspired you when creating your website (e.g. guest speakers, websites, artists, blogs).</h2>
+    <p>The obvious inspiraton were Web Development module lectures and materials provided there. By studing the lectures and related materials  I was able to create a basic structure and functionality of my website. The grid layout, hiding navigation menu, responsive design, progress bar were all inspired by the lectures. Also, use of the handlebars.js to create templates was inspired from the module videos. Sometimes I needed to find some supporting materials online. Mostly I used <a href="https://www.w3schools.com/html/">w3schools.com</a> website and less often the Youtube. Thing which was completely outside of the lectures scope was implemetation of <a href="https://en.bem.info/methodology/quick-start/">BEM</a> (Block, Element, Modifier) - a  <q>component-based approach to web development</q>, where <q>the idea behind it is to divide the user interface into independent blocks.</q> I found this concept very helpful in organising the html code and also how to name each html element. The element naming convention recommended by the BEM model significantly simplified for me the structure of the HTML and CSS. 
+      <br> Another inspiration were general principles of the design. One of the links provided in the reading section lead to the website <a href="https://blog.hubspot.com/blog/tabid/6307/bid/30557/6-guidelines-for-exceptional-website-design-and-usability.aspx">9 Guidelines & Best Practices for Exceptional Web Design and Usability</a> where the following principles of the design were recommended:
+    </p>
+    <ol>
+      <li>Simplicity</li>
+      <li>Visual Hierarchy</li>
+      <li>Navigability</li>
+      <li>Consistency</li>
+      <li>Responsivity</li>
+      <li>Accessibility</li>
+      <li>Conventionality</li>
+      <li>Credibility</li>
+      <li>User-Centricity</li>
+    </ol>
+    <p>I tried to use a simple design, where it easy to find the content and to navigate. The look and functionality of my webpages is similar across whole website. The design is responsive. There are three levels of responsivity: mobile, tablet and desktop. I introduced accessibility options and layout of the site is conventional - there are no unusall layouts or elements. The information provided there is accurate and useful.
+    <br>I also tried to follow the Flat Desig 2.0 principles, by using simple shapes and solid colours, while introducing only shadows to add a bit of the impresson of the third dimension.
+    </p>
+  
+    
+    <h2>Accessibility: State 3 ways in which your site is accessible to those with different abilities and needs (for example those with visual impairment)</h2>
+    <p>I introduced the following accesibility items:</p>
+    <ol>
+      
+      <li>An option to select three different sizes of the font. It affects all the elements of the website. The font gets significantly larger when the largest option is selected. </li> 
+      <li>An option to change the display colour to the dark mode, paricularly useful during the night. Some elements changes in the same way, while other has specific style related to the dark mode on. All images dim slightly when dark mode in use.</li>
+      <li>I used proper contrast between text and the backround items.</li>
+      <li>Whitespaces are used to make website more readable and easier to navigate</li>
+      <li>I used proper semantic structure of the website and used descriptive headings to each section to make it easier to navigate using screen reader.</li>
+      <li>I provided alternative image desctiptions for the images in case the user uses screen reader or the image failed to download. </li>
+    </ol>
+    
+    
+    <h2>Usability: State 3 ways in which you considered the usability of your site.    </h2>
+    <ul>
+      <li>By the design my webiste ment to be useful. As mentioned in the introduction I wanted this website to be useful to me or other users. The content there is relevant for the website topic and up to date. The content maybe interesting for any user. </li>
+      
+      <li>Responsive design made the webiste useful on all range of the devices. It remains useful up to 400% zoom in in the browser. No element will overlap over the other and no text will go beyond its block element</li>
+      <li>
+        It is possible to print each page directly from the webpage by clicking "Print" button. Each page has @media query especially for printing. Printed pages can easli be used instead of the electronic device.
+      </li>
+    </ul>
+    
+    <h2>Learning: state 3 things you had to learn or find out to create your site. How did you achieve that?</h2>
+    
+    <ul>
+      <li>I had to learn form the external resources how to make common html for all pages to be stored in separate file. I found out that using handlebar's partials can be used to make this possible. Handlebars were discussed extensively in lectures, however it was not mentioned how to achive such effect. I tried to use w3 script for that task, however it did not work correctly for all elements.</li>
+      
+      <li>
+        Using mentioned in the introduction BEM model for naming the elements and style them. This was nowehere mentioned during the lectures. I had to spent significant amount of time studing avialable BEM documentation to implement it in useful way. BEM model made transfer of the elements across the website very easy. My previuos method made it very complicated.
+      </li>
+      <li>
+        I learned how to use flex property to position the elements in the container. It was particularly useful to mage the responsive Photo gallery at Photos webpage. I used for that the w3schools instructions and flex property description.
+      </li>
+    </ul>
+  
+    <h2>Evaluation I: What aspects of your work do you think were particularly successful? Why?    </h2>
+    What aspect(s) of your work do you think worked well and why?
+  
+    <h2>Evaluation II: What aspects of your work could be improved? How might you do things differently another time?</h2>
+    What aspect(s) of your work could be improved, and how might you do things differently another time?
+
+    <h2>Resources: What resources did you use in your work? List any sources of information, libraries, plugins, code or tools (you should also indicate inclusions from other sources within your code using comments)</h2>
+    What resources were used when creating your work? You should list here any sources of information, libraries, plug-ins or other code that you used to create your site. 
+  
+    <h2>Appendices: Site map, wireframes and mock-ups</h2>
+
+    You should also reference any code you've used by inserting comments at the start of the scripts. 
+     Appendices: Site Map, Wireframes and Mockups 
+  </body>

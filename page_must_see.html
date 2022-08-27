@@ -76,7 +76,7 @@
       </aside>
     
     <section class="panorama_top">
-      <img class="panorama_top__img" src="Resources/Images/must_see/must_see__top.jpg">
+      <img class="panorama_top__img" alt="Main page image - View at the Zamkowy Square with the Must See sign overlayed" src="Resources/Images/must_see/must_see__top.jpg">
       <h2 class="panorama_top__heading">Must See 1-day</h2>
     </section>        
     
@@ -88,7 +88,7 @@
           {{#places}}
                 <div class="must_see_main__item" id="{{name}}">
                   <h4 class="must_see_main__name">{{name}}</h4>
-                  <img class="must_see_main__img" src="{{image_path}}">
+                  <img class="must_see_main__img" src="{{image_path}}" alt="{{name}} image">
                   <p class="must_see_main__description">{{description}}</p>
                   <a href="{{link}}" class="must_see_main__link">See the official tourism site</a>
                 </div>
@@ -111,7 +111,7 @@
               {{#places}}
                 <ol class="must_see_short__list">
                 <li class="must_see_short__item">
-                  <img class="must_see_short__img" src="{{image_path}}">
+                  <img class="must_see_short__img" src="{{image_path}}" alt="{{name}} link image">
                   <span class="must_see_short__name">
                     <a class="must_see_short__link" href="#{{name}}">
                       <span class="must_see_short__symbol">

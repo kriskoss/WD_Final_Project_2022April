@@ -51,7 +51,7 @@
         </script> 
       </header>
                   
-      <aside id="accesibility_target" class=" accessibility">
+      <aside id="accesibility_target" class="accessibility">
         <script id="template" type="template/handlebars">{{>accesibility_partial}}</script>
         
         <script> 
@@ -83,7 +83,7 @@
       </aside>
       
       <section class="panorama_top">
-        <img class="panorama_top__img" src="Resources/Images/cafes/cafe_top.jpg">
+        <img class="panorama_top__img" alt="Main page image - the coffee beans with the sign Cafes on top of it "  src="Resources/Images/cafes/cafe_top.jpg">
         <h2 class="panorama_top__heading"> Best cafes</h2>
       </section>  
       
@@ -94,8 +94,8 @@
               {{#cafes}}
                 <div class="cafes_main__item" id="{{name}}">
                   <div class="cafes_main__image_box">
-                    <img class="cafes_main__img" src="{{img_path}}">
-                    <img class="cafes_main__logo" src="{{logo_path}}">
+                    <img class="cafes_main__img" src="{{img_path}}" alt="{{name}} image and logo">
+                    <img class="cafes_main__logo" src="{{logo_path}}" >
                   </div>
                   <h4 class="cafes_main__name">{{name}}</h4>
                   <p class="cafes_main__description">{{description}}</p>
@@ -116,7 +116,7 @@
             <div class="cafes_short__flex_area">
             {{#cafes}}
               <div class="cafes_short__item">
-                <img class="cafes_short__mini_img" src="{{img_path}}">
+                <img class="cafes_short__mini_img" src="{{img_path}}" alt="{{name}} link image and logo">
                 <img class="cafes_short__logo" src="{{logo_path}}">
                 <span class="cafes_short__name">
                   <a class="cafes_short__link" href="#{{name}}">
