@@ -1,5 +1,5 @@
 //Finds a maximium height od the web page
-//reference-https://stackoverflow.com/questions/1145850/how-to-get-height-of-entire-document-with-javascript
+//reference[2] -https://stackoverflow.com/questions/1145850/how-to-get-height-of-entire-document-with-javascript
 let body = document.body;
 let html = document.documentElement;
 //end reference

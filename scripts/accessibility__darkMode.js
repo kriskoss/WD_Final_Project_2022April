@@ -24,7 +24,7 @@ function darkMode(c) {
     console.log("dark mode off");
   }
   
-  //REFERNECE: https://stackoverflow.com/questions/7184562/how-to-get-elements-with-multiple-classes
+  //REFERNECE 3: https://stackoverflow.com/questions/7184562/how-to-get-elements-with-multiple-classes
   //Selection of the elemetns that will be affected by the darkMode
   let allElelmens = document.querySelectorAll(
     "*"

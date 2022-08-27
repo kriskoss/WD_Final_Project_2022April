@@ -61,6 +61,8 @@ img.darkMode-on {
 
 
 /*MAIN ---- photo gallery ###################################*/
+/*#Reference 4 - https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp*/
+
 .row {
   display: flex;
   flex-wrap: wrap;
