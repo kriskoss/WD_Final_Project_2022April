@@ -176,7 +176,7 @@ footer{grid-area: footer}
 
 @media screen and (min-width: 571px) and (max-width: 1010px){
   #grid-container-index {
-    grid-template-columns: 25% auto;
+    grid-template-columns: 40% auto;
     grid-template-areas:
     'header header header '
     
