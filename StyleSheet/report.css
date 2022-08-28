@@ -68,7 +68,7 @@ hr {
 
 .small_image {
   width: 30%;
-  max-width: 300px;
+/*  max-width: 300px;*/
   height: auto;
   margin: 10px;
     
@@ -78,5 +78,25 @@ hr {
   width: 45%;
   
   height: auto;
-  margin: 10px;
+  margin: auto;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1010px){
+.images{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+}
+  .small_image { 
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .medium_image{
+  width: 100%;
+  
+  
+}
 }

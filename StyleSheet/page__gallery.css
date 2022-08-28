@@ -67,7 +67,6 @@ img.darkMode-on {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-  max-width: 2500px;
   margin: auto;
 }
 

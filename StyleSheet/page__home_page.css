@@ -28,6 +28,7 @@
   background-color: #fcfcfc;
   box-shadow: 1px 1px 5px rgba(111, 111, 111, 0.48);
   border-radius: 5px;
+  text-align: justify;
   
 }
 
@@ -45,6 +46,8 @@
   border: 3px solid #fd9797;
   background-color: #ffeeee;
   border-radius: 5px;
+  
+  font-size: 1.2em;
 }
 
 .intro__item.darkMode-on{
