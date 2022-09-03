@@ -8,14 +8,14 @@
 
 /*INTRO section*/
 .bottom_margin {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .intro{
   
 }
 
 .intro__heading{
-  
+  padding: 20px;  
 }
 
 .intro__list{
@@ -29,15 +29,23 @@
   box-shadow: 1px 1px 5px rgba(111, 111, 111, 0.48);
   border-radius: 5px;
   text-align: justify;
-  
+  padding: 20px;  
 }
 
 @media screen and (max-width: 570px){
+  body{
+    padding: 0;
+    margin: 0;
+  }
+  
+  .intro__list {
+    background-color: #f5f5f5;
+  }
+
   .intro__item{
-    background:none ;
-  box-shadow: none;
-  border-radius: 0px;
-  border-top: 1px solid #bcbbbb;
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: 0px 3px 10px #adadad;
   
   }
 }
