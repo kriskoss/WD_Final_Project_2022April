@@ -52,6 +52,7 @@
 .cafes_main__item {
   display: block; 
   overflow: auto;
+  padding: 20px;
 /*  min-height: calc(var(--cafes_main__image_box_height) + 0px);*/
     
   margin: 10px;
@@ -180,6 +181,7 @@
   box-shadow: 2px 2px 5px #d4d4d4;
   border-radius: 5px;
   margin: auto;
+  padding: 20px;
   
 }
 

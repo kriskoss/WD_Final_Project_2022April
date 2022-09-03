@@ -48,6 +48,10 @@
   background-color: hsla(18, 20%, 94%, 0.45);
   margin-bottom: 5px;
   border-radius: 2vw;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px #bebebe;
 }
 .must_see_main__item.darkMode-on {
   background-color: #171717
